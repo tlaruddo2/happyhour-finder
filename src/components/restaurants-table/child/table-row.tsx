@@ -1,18 +1,12 @@
 import { useCallback, useState } from "react";
 import TableRowDetail from "./table-row-detail";
+import { Restaurant } from "../../../entity/restaurant/restaurant";
 
 interface TableRowProps{
-    info:{
-        id: number,
-        name: string,
-        phone: string,
-        email: string,
-        country: string,
-        alphanumeric: string
-    }
+    restaurant: Restaurant
 }
 
-const TableRow = ({ info }: TableRowProps) => {
+const TableRow = ({ restaurant }: TableRowProps) => {
     const [ isButtonClicked, setButtonClicked ] = useState(false);
 
     const handleClick = useCallback(() => { 
@@ -22,12 +16,18 @@ const TableRow = ({ info }: TableRowProps) => {
     return (
         <tbody>
             <tr>
+                <td>{restaurant.name}</td>
+                <td>{restaurant.address}</td>
+                <td>{restaurant.time}</td>
+                <td>{restaurant.day}</td>
+                <td>{restaurant.food ? "yes" : "no"}</td>
+                <td>{restaurant.drink ? "yes" : "no"}</td>
                 <td>
-                    <button onClick={handleClick}>{isButtonClicked ? "a" : "b"}</button>
+                    <a href={restaurant.link}>click</a>
                 </td>
-                <td>{info.name}</td>
+                <td><button onClick={handleClick}>Click</button></td>
             </tr>
-            {isButtonClicked && <TableRowDetail/>}
+            {isButtonClicked && <TableRowDetail detail={restaurant.detail}/>}
         </tbody>
     )
 }

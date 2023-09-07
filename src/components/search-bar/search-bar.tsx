@@ -16,6 +16,7 @@ const SearchBar = () => {
 const Container = styled.div`
     display: flex;
     justify-content: center;
+    height: 100px;
 `
 
 export default SearchBar;

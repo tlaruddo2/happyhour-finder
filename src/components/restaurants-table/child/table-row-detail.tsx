@@ -1,7 +1,11 @@
-const TableRowDetail = () => {
+interface TableRowDetailProps{
+    detail: string
+}
+
+const TableRowDetail = ({detail}: TableRowDetailProps) => {
     return (
         <tr>
-            <td>sdfs</td>
+            <td>{detail}</td>
         </tr>
     )
 }

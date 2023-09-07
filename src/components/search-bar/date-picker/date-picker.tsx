@@ -14,7 +14,7 @@ const DatePicker = () => {
 }
 
 const Container = styled.div`
-  height: 300px;
+  height: 100px;
   width: 400px;
   margin: 20px;
 `
