@@ -9,7 +9,6 @@ const SearchBar = () => {
             <DatePicker/>
             <TimePicker/>
             <LocationPicker/>
-            {/* <img src="/image/calendar.png" alt=""/> */}
         </Container>
     )
 }
