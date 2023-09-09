@@ -3,6 +3,7 @@ import TableHead from "./child/table-head";
 import styled from "styled-components";
 import Table from 'react-bootstrap/Table';
 import { Restaurant, restaurantSamples } from "../../entity/restaurant/restaurant";
+import checkInTimeRange from "../../functions/check-in-time-range";
 
 interface RestaurantTableProps{
     date: string,
@@ -11,8 +12,8 @@ interface RestaurantTableProps{
 }
 const RestaurantsTable = ({ date, time, address }: RestaurantTableProps) => {
 
-    const filteredSamples: Restaurant[] = restaurantSamples.filter((restaurants) => 
-        restaurants.address.includes(address)
+    const filteredSamples: Restaurant[] = restaurantSamples.filter((restaurant) => 
+        restaurant.address.includes(address) && checkInTimeRange(restaurant.startTime, restaurant.endTime, time)
     );
 
     return (

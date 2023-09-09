@@ -18,7 +18,8 @@ const TableRow = ({ restaurant }: TableRowProps) => {
             <tr>
                 <td>{restaurant.name}</td>
                 <td>{restaurant.address}</td>
-                <td>{restaurant.time}</td>
+                <td>{restaurant.startTime}</td>
+                <td>{restaurant.endTime}</td>
                 <td>{restaurant.day}</td>
                 <td>{restaurant.food ? "yes" : "no"}</td>
                 <td>{restaurant.drink ? "yes" : "no"}</td>

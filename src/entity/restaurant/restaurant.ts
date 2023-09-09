@@ -2,7 +2,8 @@ export interface Restaurant{
     id: number;
     name: string;
     address: string;
-    time: string;
+    startTime: string;
+    endTime: string;
     day: string;
     food: boolean;
     drink: boolean;
@@ -16,7 +17,8 @@ export const restaurantSamples : Restaurant[] = [
         id: 1, 
         name: "momo sushi 1",
         address: "1230 Robson Vancouver",
-        time: "9-5pm", 
+        startTime: "11:00", 
+        endTime: "22:00",
         day: "Thur", 
         food: true, 
         drink: false, 
@@ -27,44 +29,25 @@ export const restaurantSamples : Restaurant[] = [
         id: 2, 
         name: "momo sushi 2",
         address: "1230 Robson Vancouver",
-        time: "9-5pm", 
+        startTime: "16:00", 
+        endTime: "22:00",
         day: "Thur", 
-        food: false, 
-        drink: true, 
+        food: true, 
+        drink: false, 
         link: "https://goo.gl/maps/5XvSAuxBzrDFdQ4B8",
         detail: "detail 2"
     },
     {
         id: 3, 
         name: "momo sushi 3",
-        address: "1230 Robson Vancouver",
-        time: "9-5pm", 
+        address: "1234 Davie Vancouver",
+        startTime: "18:00", 
+        endTime: "22:00",
         day: "Thur", 
         food: true, 
         drink: false, 
         link: "https://goo.gl/maps/5XvSAuxBzrDFdQ4B8",
         detail: "detail 3"
     },
-    {
-        id: 4, 
-        name: "momo sushi 4",
-        address: "1230 Robson Vancouver",
-        time: "9-5pm", 
-        day: "Thur", 
-        food: false, 
-        drink: true, 
-        link: "https://goo.gl/maps/5XvSAuxBzrDFdQ4B8",
-        detail: "detail 4"
-    },    
-    {
-        id: 5, 
-        name: "momo sushi 5",
-        address: "1230 Robson Vancouver",
-        time: "9-5pm", 
-        day: "Thur", 
-        food: false, 
-        drink: true, 
-        link: "https://goo.gl/maps/5XvSAuxBzrDFdQ4B8",
-        detail: "detail 5"
-    },    
+    
 ]
