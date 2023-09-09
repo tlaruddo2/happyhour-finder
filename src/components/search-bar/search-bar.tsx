@@ -3,12 +3,17 @@ import TimePicker from "./time-picker/time-picker"
 import LocationPicker from "./location-picker/location-picker"
 import DatePicker from "./date-picker/date-picker"
 
-const SearchBar = () => {
+interface SearchBarProps { 
+    setDate: React.Dispatch<React.SetStateAction<string>>;
+    setTime: React.Dispatch<React.SetStateAction<string>>;
+    setAddress: React.Dispatch<React.SetStateAction<string>>
+}
+const SearchBar = ({ setDate, setTime, setAddress }: SearchBarProps) => {
     return (
         <Container>
             <DatePicker/>
             <TimePicker/>
-            <LocationPicker/>
+            <LocationPicker setAddress={setAddress}/>
         </Container>
     )
 }

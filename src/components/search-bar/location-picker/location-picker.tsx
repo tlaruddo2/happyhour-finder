@@ -3,7 +3,14 @@ import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 import Button from 'react-bootstrap/Button';
 
-const LocationPicker = () => {
+interface LocationPickerProps {
+    setAddress: React.Dispatch<React.SetStateAction<string>>
+}
+const LocationPicker = ({ setAddress }: LocationPickerProps) => {
+    const hanldeChange = (e : React.ChangeEvent<HTMLInputElement>) => {
+        setAddress(e.target.value);
+    }
+
     return (
         <Container>
             <InputGroup className="mb-3">
@@ -11,6 +18,7 @@ const LocationPicker = () => {
                 placeholder="address"
                 aria-label="address"
                 aria-describedby="basic-addon1"
+                onChange={hanldeChange}
                 />
                 <Button variant="outline-secondary" id="button-addon1">
                     Current Location
