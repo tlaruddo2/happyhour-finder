@@ -3,17 +3,23 @@ import Layout from "../layout/layout";
 import SearchBar from "../components/search-bar/search-bar";
 import RestaurantsTable from "../components/restaurants-table/restaurants-table"
 import { useState } from "react";
+import ModeSwitch from "../components/mode-swich/mode-swich";
+import RestaurantsMap from "../components/restaurants-map/restautrants-map";
 
 const Home = () => { 
-    const [date, setDate] = useState(""); 
-    const [time, setTime] = useState("");
-    const [address, setAddress] = useState("");
+    const [ date, setDate ] = useState(""); 
+    const [ time, setTime ] = useState("");
+    const [ address, setAddress ] = useState("");
+
+    const [ isTable, setTable ] = useState(false);
 
     return (
         <Layout>
             <Logo/>
             <SearchBar setDate={setDate} setTime={setTime} setAddress={setAddress}/>
-            <RestaurantsTable date={date} time={time} address={address}/>
+            <ModeSwitch setTable={setTable}/>
+            { isTable && <RestaurantsTable date={date} time={time} address={address}/>}
+            { !isTable && <RestaurantsMap/>}
         </Layout>
     )
 }
