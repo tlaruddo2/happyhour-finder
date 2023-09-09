@@ -11,7 +11,7 @@ interface SearchBarProps {
 const SearchBar = ({ setDate, setTime, setAddress }: SearchBarProps) => {
     return (
         <Container>
-            <DatePicker/>
+            <DatePicker setDate={setDate}/>
             <TimePicker setTime={setTime}/>
             <LocationPicker setAddress={setAddress}/>
         </Container>

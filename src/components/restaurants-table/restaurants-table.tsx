@@ -13,7 +13,7 @@ interface RestaurantTableProps{
 const RestaurantsTable = ({ date, time, address }: RestaurantTableProps) => {
 
     const filteredSamples: Restaurant[] = restaurantSamples.filter((restaurant) => 
-        restaurant.address.includes(address) && checkInTimeRange(restaurant.startTime, restaurant.endTime, time)
+        restaurant.address.includes(address) && checkInTimeRange(restaurant.startTime, restaurant.endTime, time) && restaurant.day.includes(date)
     );
 
     return (

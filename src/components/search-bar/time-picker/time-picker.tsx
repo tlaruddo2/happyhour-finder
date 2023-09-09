@@ -4,10 +4,11 @@ import  Form  from "react-bootstrap/Form";
 interface TimePickerProps{
   setTime: React.Dispatch<React.SetStateAction<string>>
 }
-const TimePicker = ({setTime}: TimePickerProps) => {
+const TimePicker = ({ setTime }: TimePickerProps) => {
     const handleChange = (e : React.ChangeEvent<HTMLInputElement>) => { 
       setTime(e.target.value)
     }
+    
     return ( 
         <Container>
           <Form.Control
