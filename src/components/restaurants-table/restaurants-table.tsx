@@ -10,6 +10,7 @@ interface RestaurantTableProps{
     address: string,
 }
 const RestaurantsTable = ({ date, time, address }: RestaurantTableProps) => {
+
     const filteredSamples: Restaurant[] = restaurantSamples.filter((restaurants) => 
         restaurants.address.includes(address)
     );

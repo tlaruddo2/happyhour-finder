@@ -12,7 +12,7 @@ const SearchBar = ({ setDate, setTime, setAddress }: SearchBarProps) => {
     return (
         <Container>
             <DatePicker/>
-            <TimePicker/>
+            <TimePicker setTime={setTime}/>
             <LocationPicker setAddress={setAddress}/>
         </Container>
     )
