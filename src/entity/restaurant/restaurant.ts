@@ -9,6 +9,8 @@ export interface Restaurant{
     drink: boolean;
     link: string;
     detail: string;
+    lat: number,
+    lng: number,
 }
 
 
@@ -23,7 +25,9 @@ export const restaurantSamples : Restaurant[] = [
         food: true, 
         drink: false, 
         link: "https://goo.gl/maps/5XvSAuxBzrDFdQ4B8",
-        detail: "detail 1"
+        detail: "detail 1",
+        lat: 35.0465,
+        lng: 128.9635,
     },
     {
         id: 2, 
@@ -35,7 +39,9 @@ export const restaurantSamples : Restaurant[] = [
         food: true, 
         drink: false, 
         link: "https://goo.gl/maps/5XvSAuxBzrDFdQ4B8",
-        detail: "detail 2"
+        detail: "detail 2",
+        lat: 35.0465,
+        lng: 128.9635,
     },
     {
         id: 3, 
@@ -47,7 +53,9 @@ export const restaurantSamples : Restaurant[] = [
         food: true, 
         drink: false, 
         link: "https://goo.gl/maps/5XvSAuxBzrDFdQ4B8",
-        detail: "detail 3"
+        detail: "detail 3",
+        lat: 35.0465,
+        lng: 128.9635,
     },
     
 ]

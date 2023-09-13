@@ -5,7 +5,7 @@ const RestaurantsMap = () => {
     return (
         <Container>
             {/* no call map api when develop */}
-            {/* <Map/> */}
+            <Map/>
         </Container>
     )
 }
@@ -13,5 +13,8 @@ const RestaurantsMap = () => {
 const Container = styled.div`
     height: 100%;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 `
 export default RestaurantsMap;
