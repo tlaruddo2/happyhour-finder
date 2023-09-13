@@ -3,7 +3,8 @@ import TableHead from "./child/table-head";
 import styled from "styled-components";
 import Table from 'react-bootstrap/Table';
 import { Restaurant, restaurantSamples } from "../../entity/restaurant/restaurant";
-import checkInTimeRange from "../../functions/check-in-time-range";
+import { checkInTimeRange } from "functions";
+
 
 interface RestaurantTableProps{
     date: string,

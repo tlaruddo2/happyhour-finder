@@ -1,4 +1,4 @@
-const checkInTimeRange = (start: string, end: string, input: string) => { 
+export const checkInTimeRange = ( start: string, end: string, input: string ) :boolean => { 
     let startTimeArr = start.split(":");
     let endTimeArr = end.split(":");
     let inputTimeArr = input.split(":");
@@ -13,5 +13,3 @@ const checkInTimeRange = (start: string, end: string, input: string) => {
     }
     return false;
 }
-
-export default checkInTimeRange;

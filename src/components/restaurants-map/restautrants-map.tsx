@@ -4,7 +4,8 @@ import Map from "./child/map";
 const RestaurantsMap = () => {    
     return (
         <Container>
-            <Map/>
+            {/* no call map api when develop */}
+            {/* <Map/> */}
         </Container>
     )
 }

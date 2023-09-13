@@ -5,10 +5,11 @@ import RestaurantsTable from "../components/restaurants-table/restaurants-table"
 import { useState } from "react";
 import ModeSwitch from "../components/mode-swich/mode-swich";
 import RestaurantsMap from "../components/restaurants-map/restautrants-map";
+import { getCurrentDate, getCurrentTime } from "functions";
 
 const Home = () => { 
-    const [ date, setDate ] = useState(""); 
-    const [ time, setTime ] = useState("");
+    const [ date, setDate ] = useState(getCurrentDate()); 
+    const [ time, setTime ] = useState(getCurrentTime());
     const [ address, setAddress ] = useState("");
 
     const [ isTable, setTable ] = useState(false);
