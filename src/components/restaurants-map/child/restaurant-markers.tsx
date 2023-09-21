@@ -4,8 +4,13 @@ import type { Restaurant } from "entity/restaurant/restaurant";
 import { useState } from "react";
 import styled from "styled-components";
 
-const RestaurantMarkers = () => {
-    const [ isOpend, setOpend ] = useState(true); 
+interface RestaurantMarkersProps{
+    isOpend: boolean,
+    setOpend:  React.Dispatch<React.SetStateAction<boolean>>
+}
+
+const RestaurantMarkers = ({ isOpend, setOpend }: RestaurantMarkersProps) => {
+    // const [ isOpend, setOpend ] = useState(true); 
     const [ detailed, setDetailed ] = useState("a");
     const [ lat, setLat ] = useState(0);
     const [ lng, setLng ] = useState(0);
@@ -19,6 +24,7 @@ const RestaurantMarkers = () => {
 
     }
     const closeClickHandler = () => {
+        setOpend(true);
         console.log("clokse click")
     }
 
@@ -29,9 +35,8 @@ const RestaurantMarkers = () => {
                     onClick={() => markerClickHandler(restaurantSamples, r.id-1)} 
                     position={{ lat: r.lat, lng: r.lng }}
                     icon="https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png"
-                    key = {r.id}
-                >           
-                </MarkerF>
+                    key = {r.id}/>                               
+                // </MarkerF>
             )}    
             {isOpend &&
                 <InfoBoxF position={new google.maps.LatLng(lat, lng)} onCloseClick={closeClickHandler}>
