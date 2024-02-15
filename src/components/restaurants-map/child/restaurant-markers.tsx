@@ -1,15 +1,19 @@
 import { MarkerF, InfoBoxF } from "@react-google-maps/api";
 import { restaurantSamples } from "entity/restaurant/restaurant"
 import type { Restaurant } from "entity/restaurant/restaurant";
+import { checkInTimeRange } from "functions";
 import { useState } from "react";
 import styled from "styled-components";
 
 interface RestaurantMarkersProps{
     isOpend: boolean,
     setOpend:  React.Dispatch<React.SetStateAction<boolean>>
+    date: string,
+    time: string,
+    address: string,
 }
 
-const RestaurantMarkers = ({ isOpend, setOpend }: RestaurantMarkersProps) => {
+const RestaurantMarkers = ({ isOpend, setOpend, date, time, address }: RestaurantMarkersProps) => {
     // const [ isOpend, setOpend ] = useState(true); 
     const [ detailed, setDetailed ] = useState("a");
     const [ lat, setLat ] = useState(0);
@@ -28,19 +32,26 @@ const RestaurantMarkers = ({ isOpend, setOpend }: RestaurantMarkersProps) => {
         console.log("clokse click")
     }
 
+    const filteredSamples: Restaurant[] = restaurantSamples.filter((restaurant) => 
+    restaurant.address.includes(address) && checkInTimeRange(restaurant.startTime, restaurant.endTime, time) && restaurant.day.includes(date)
+    );
+
     return (
         <>
-            {restaurantSamples.map(( r ) =>
-                <MarkerF 
-                    onClick={() => markerClickHandler(restaurantSamples, r.id-1)} 
+            {filteredSamples.map(( r ) => {
+                return (
+                    <MarkerF 
+                    onClick={() => markerClickHandler(filteredSamples, r.id-1)} 
                     position={{ lat: r.lat, lng: r.lng }}
                     icon="https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png"
                     key = {r.id}/>                               
-                // </MarkerF>
-            )}    
+            )})}    
             {isOpend &&
-                <InfoBoxF position={new google.maps.LatLng(lat, lng)} onCloseClick={closeClickHandler}>
+                <InfoBoxF 
+                    position={new google.maps.LatLng(lat, lng)} 
+                >
                     <InfoBox>
+                        <CloseButton onClick={closeClickHandler}>close</CloseButton>
                         { detailed }
                     </InfoBox>
                 </InfoBoxF>
@@ -50,10 +61,17 @@ const RestaurantMarkers = ({ isOpend, setOpend }: RestaurantMarkersProps) => {
 }
 
 const InfoBox = styled.div`
-    width: 200px; 
-    height: 200px;
-    background-color: yellow;
+    width: 100px; 
+    height: 100px;
+    background-color: #ffffff;
+    border: 1px solid black;
     padding: 2px;
+    display: flex; 
+    flex-direction: column;
+`
+
+const CloseButton = styled.button`
+    
 `
 
 export default RestaurantMarkers;
