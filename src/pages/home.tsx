@@ -6,8 +6,9 @@ import RestaurantsMap from "../components/restaurants-map/restautrants-map";
 import { getCurrentDate, getCurrentTime } from "functions";
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLocation } from "@fortawesome/free-solid-svg-icons";
+import { faList, faLocation } from "@fortawesome/free-solid-svg-icons";
 import { ThemeColor } from "data/const";
+import RestaurantList from "components/restaurant-list/restaurant-list";
 
 const Home = () => { 
     const [ date, setDate ] = useState(getCurrentDate()); 
@@ -22,6 +23,7 @@ const Home = () => {
                 <FontAwesomeIcon icon={faLocation} style={{color: ThemeColor.main, width: "80%", height: "80%"}}/>
             </CurrentLocationIcon>            
             <RestaurantsMap date={date} time={time} address={address}/>
+            <RestaurantList/>
         </Layout>
     )
 }
@@ -39,4 +41,6 @@ const CurrentLocationIcon = styled.div`
     align-items: center;
     border-radius: 10px;
 `
+
+
 export default Home;

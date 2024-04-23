@@ -12,9 +12,9 @@ const Map = ({ date, time, address }: MapProps) => {
     const { isLoaded } = useLoadScript({ googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAP_API_KEY!})
 
     //todo: make helper function
-    const [ currnetLat, setCurrentLat ] = useState(0);
-    const [ currnetLng, setCurrentLng ] = useState(0);
-    const [ isOpend, setOpend ] = useState(true);  //infomap
+    const [ currnetLat, setCurrentLat ] = useState(49.28);
+    const [ currnetLng, setCurrentLng ] = useState(-123.12);
+
     navigator.geolocation.getCurrentPosition((position) => {   
         setCurrentLat(position.coords.latitude);
         setCurrentLng(position.coords.longitude);
@@ -35,17 +35,11 @@ const Map = ({ date, time, address }: MapProps) => {
             zoom={15} 
             center={center} 
             mapContainerStyle={{width: "100%", height: "100%"}} 
-            onClick={() => setOpend(false)}
+            onClick={() => console.log("map click")}
             options={mapOptions}
         >
             <CurrentLocationMarker lat={currnetLat} lng={currnetLng}/>
-            <RestaurantMarkers 
-                isOpend={isOpend} 
-                setOpend={setOpend} 
-                date={date} 
-                time={time} 
-                address={address}
-            />
+            <RestaurantMarkers/>
         </GoogleMap>
     )
 }

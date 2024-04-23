@@ -7,27 +7,31 @@ export interface Restaurant{
     day: string;
     food: boolean;
     drink: boolean;
-    link: string;
+    googleMap: string;
     detail: string;
     lat: number,
     lng: number,
+    isInfoOpend: boolean,
+    phone: string,
 }
 
 
 export const restaurantSamples : Restaurant[] = [
     {
         id: 1, 
-        name: "MoMo Sushi Japanese Restaurant",
+        name: "MoMo Sushi",
         address: "1230 Robson Vancouver",
         startTime: "11:00", 
         endTime: "22:00",
         day: "Mon Tue", 
         food: true, 
         drink: false, 
-        link: "https://goo.gl/maps/5XvSAuxBzrDFdQ4B8",
-        detail: "detail 1",
+        googleMap: "https://goo.gl/maps/5XvSAuxBzrDFdQ4B8",
+        detail: "Japanese Restaurant",
         lat: 49.2867223,
         lng: -123.1322211,
+        isInfoOpend: false,
+        phone: '7788633853'
     },
     {
         id: 2, 
@@ -36,12 +40,14 @@ export const restaurantSamples : Restaurant[] = [
         startTime: "16:00", 
         endTime: "22:00",
         day: "Thr Tue", 
-        food: true, 
-        drink: false, 
-        link: "https://goo.gl/maps/5XvSAuxBzrDFdQ4B8",
+        food: false, 
+        drink: true, 
+        googleMap: "https://goo.gl/maps/5XvSAuxBzrDFdQ4B8",
         detail: "detail 2",
         lat: 49.2877156,
         lng: -123.1385097,
+        isInfoOpend: false,
+        phone: '7788633853'
     },
     {
         id: 3, 
@@ -51,11 +57,45 @@ export const restaurantSamples : Restaurant[] = [
         endTime: "22:00",
         day: "Mon", 
         food: true, 
-        drink: false, 
-        link: "https://goo.gl/maps/5XvSAuxBzrDFdQ4B8",
+        drink: true, 
+        googleMap: "https://goo.gl/maps/5XvSAuxBzrDFdQ4B8",
         detail: "detail 3",
         lat: 49.287398,
         lng: -123.1385981,
+        isInfoOpend: false,
+        phone: '7788633853'
     },
+    {
+        id: 3, 
+        name: "Cardero Cafe",
+        address: "1016 Cardero St, Vancouver, BC V6G 2H1",
+        startTime: "18:00", 
+        endTime: "22:00",
+        day: "Mon", 
+        food: true, 
+        drink: true, 
+        googleMap: "https://goo.gl/maps/5XvSAuxBzrDFdQ4B8",
+        detail: "detail 3",
+        lat: 49.287398,
+        lng: -123.1385981,
+        isInfoOpend: false,
+        phone: '7788633853'
+    },
+    {
+        id: 3, 
+        name: "Cardero Cafe",
+        address: "1016 Cardero St, Vancouver, BC V6G 2H1",
+        startTime: "18:00", 
+        endTime: "22:00",
+        day: "Mon", 
+        food: true, 
+        drink: true, 
+        googleMap: "https://goo.gl/maps/5XvSAuxBzrDFdQ4B8",
+        detail: "detail 3",
+        lat: 49.287398,
+        lng: -123.1385981,
+        isInfoOpend: false,
+        phone: '7788633853'
+    },        
     
 ]

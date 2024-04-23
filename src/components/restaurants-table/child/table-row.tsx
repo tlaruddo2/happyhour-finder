@@ -24,7 +24,7 @@ const TableRow = ({ restaurant }: TableRowProps) => {
                 <td>{restaurant.food ? "yes" : "no"}</td>
                 <td>{restaurant.drink ? "yes" : "no"}</td>
                 <td>
-                    <a href={restaurant.link} target="_blank">click</a>
+                    <a href={restaurant.googleMap} target="_blank">click</a>
                 </td>
                 <td><button onClick={handleClick}>Click</button></td>
             </tr>
