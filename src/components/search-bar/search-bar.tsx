@@ -28,18 +28,26 @@ const Container = styled.div`
     z-index: 1;
     display: flex;
     align-items: center;
-    justify-content: center;
-    height: 5%;
+    justify-content: space-between;
+    height: 2.5rem;
+    width: 12rem;
     border-radius: 20px;
     border: none;
     background-color: white;
     padding: 0 20px 0 0;
+    font-size: 0.9rem;
+
+    @media (min-width: 40rem) {
+        width: 20rem;
+        
+    }
 `
 
 const SearchInput = styled.input`
-    padding: 0 0 0 10px;
+    padding: 0rem 1rem;
     border: none;
     border-radius: 10px;
+    width: 90%;
 `
 
 export default SearchBar;

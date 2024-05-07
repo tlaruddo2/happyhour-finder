@@ -14,12 +14,12 @@ const Logo = () => {
                     <FontAwesomeIcon icon={faBars} />
                 </Menu>
                 <Title href="/">
-                    Happyhour
+                    Happy<br/>Hour
                 </Title>            
             </TitleContainer>
             {menuClicked && 
-                <div style={{position: "fixed", left: "2%", top: "calc(7% + 10px)", zIndex: 1}}>
-                    <div style={{ border: "none", backgroundColor: "#6cd082", zIndex: 1, borderRadius: "10px", padding: "5px", color: "white", marginBottom: "3px"}}>
+                <div style={{position: "fixed", left: "2%", top: "calc(7% + 10px)", zIndex: 1, marginTop: "0.5rem", fontSize: "0.9rem"}}>
+                    <div style={{ border: "none", backgroundColor: "#6cd082", zIndex: 1, borderRadius: "10px", padding: "5px", color: "white", marginBottom: "0.2rem"}}>
                         About Us
                     </div>
                     <div style={{border: "none", backgroundColor: "#6cd082", zIndex: 1, borderRadius: "10px", padding: "5px", color: "white"}}>
@@ -37,7 +37,7 @@ const TitleContainer = styled.div`
     top: 2%;    
     z-index: 1;
     display: flex;
-    height: 3em;
+    height: 3rem;
 `
 
 const Menu = styled.div`
@@ -60,7 +60,10 @@ const Title = styled.a`
     color: white;
     padding: 0.7em;
     font-weight: 600;
-    height: 3em;
+    height: 3rem;
+    width: 4rem;
+    font-size: 0.9rem;
+    line-height: 1;
 `
 
 export default Logo;
