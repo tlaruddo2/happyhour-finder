@@ -9,14 +9,14 @@ export const Container = styled.div<ListContainerProps>`
     left: 50%;
     transform: translateX(-50%);
     height: 60%;
-    width: 70%;   
+    width: 95%;   
     background-color: white;
     border: none;
     border-radius: 10px;
     padding: 1rem;
     transition: transform 0.5s ease-in-out; 
     z-index: 1;
-    overflow-y: auto; /* Add a vertical scrollbar if necessary */
+    overflow-y: auto;
 
     ${({ isSelected }) => isSelected && `
         // top: 50%;

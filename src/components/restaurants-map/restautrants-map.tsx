@@ -1,16 +1,19 @@
 import styled from "styled-components";
 import Map from "./child/map";
+import { Coord } from "pages/home";
+
 
 interface RestaurantMapProps{
     date: string,
     time: string,
     address: string,
+    currentCoord: Coord,
+    setCurrentCoord: React.Dispatch<React.SetStateAction<Coord>>
 }
-const RestaurantsMap = ({ date, time, address }: RestaurantMapProps) => {    
+const RestaurantsMap = ({ date, time, address, currentCoord, setCurrentCoord}: RestaurantMapProps) => {    
     return (
         <Container>
-            {/* no call map api when develop */}
-            <Map date={date}  time={time} address={address}/>
+            <Map date={date}  time={time} address={address} currentCoord={currentCoord} setCurrentCoord={setCurrentCoord}/>
         </Container>
     )
 }

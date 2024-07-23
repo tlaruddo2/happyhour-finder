@@ -49,6 +49,7 @@ export const ListDialog: React.FC<Props> = ({ isSelected }) => {
                                     currentTop={currentTop}
                                     restaurant={selectedRestaurant}
                                     clickHandler = {() => setIsCardClicked(false)}
+                                    isClicked={isCardClicked}
                                 />
             }
         </Container>        

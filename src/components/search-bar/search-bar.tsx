@@ -2,21 +2,48 @@ import styled from "styled-components"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { ThemeColor } from "data/const";
+import { Coord } from "pages/home";
+import { Autocomplete } from "@react-google-maps/api";
+import { useRef } from "react";
 
 interface SearchBarProps { 
-    setDate: React.Dispatch<React.SetStateAction<string>>;
-    setTime: React.Dispatch<React.SetStateAction<string>>;
-    setAddress: React.Dispatch<React.SetStateAction<string>>
+    // setDate: React.Dispatch<React.SetStateAction<string>>;
+    // setTime: React.Dispatch<React.SetStateAction<string>>;
+    // setAddress: React.Dispatch<React.SetStateAction<string>>,
+    setCurrentCoord: React.Dispatch<React.SetStateAction<Coord>>
 }
-const SearchBar = ({ setDate, setTime, setAddress }: SearchBarProps) => {
-    const hanldeChange = (e : React.ChangeEvent<HTMLInputElement>) => {
-        setAddress(e.target.value);
+const SearchBar = ({ setCurrentCoord }: SearchBarProps) => {
+    // const hanldeChange = (e : React.ChangeEvent<HTMLInputElement>) => {
+    //     setAddress(e.target.value);
+    // }
+
+    const autocompleteRef = useRef<google.maps.places.Autocomplete | null>(null);
+
+    const onLoad = (autocomplete: google.maps.places.Autocomplete) => {
+        autocompleteRef.current = autocomplete;
+    };
+
+    const onPlaceChanged = () => {
+    if (autocompleteRef.current !== null) {
+        const place = autocompleteRef.current.getPlace();
+        if (place.geometry) {
+            const lat = place.geometry.location?.lat();
+            const lng = place.geometry.location?.lng();
+            if (lat !== undefined && lng !== undefined) {
+                setCurrentCoord({ lat, lng });
+                console.log("Selected Place:", { lat, lng });
+            }
+        }
     }
+    };
+    
 
     return (
         <Container>
-            <SearchInput type="text" placeholder="Type address"/>
-            <FontAwesomeIcon icon={faMagnifyingGlass}  style={{ color: ThemeColor.main}}/>
+            <Autocomplete onLoad={onLoad} onPlaceChanged={onPlaceChanged}>
+                <SearchInput type="text" placeholder="Type address"/>
+                {/* <FontAwesomeIcon icon={faMagnifyingGlass}  style={{ color: ThemeColor.main}}/> */}
+            </Autocomplete>
         </Container>
     )
 }
@@ -34,7 +61,7 @@ const Container = styled.div`
     border-radius: 20px;
     border: none;
     background-color: white;
-    padding: 0 20px 0 0;
+    padding: 0 10px 0 0;
     font-size: 0.9rem;
 
     @media (min-width: 40rem) {
@@ -47,7 +74,7 @@ const SearchInput = styled.input`
     padding: 0rem 1rem;
     border: none;
     border-radius: 10px;
-    width: 90%;
+    width: 100%;
 `
 
 export default SearchBar;

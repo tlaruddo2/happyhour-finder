@@ -1,4 +1,4 @@
-import { faPhone } from "@fortawesome/free-solid-svg-icons"
+import { faPhone, faMap } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import styled from "styled-components"
 
@@ -13,7 +13,7 @@ export const Contact: React.FC<Props> = ({ googleMap,  phone}) => {
              <a href={googleMap} target="'_blank'">
                 <FontAwesomeIcon 
                     style={{paddingRight: '0.3rem'}}
-                    icon={faPhone} />
+                    icon={faMap} />
             </a>
             <a href={`tel:${phone}`} style={{ marginRight: '0.3rem' }}>
                 <FontAwesomeIcon icon={faPhone} />

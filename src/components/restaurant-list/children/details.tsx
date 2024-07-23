@@ -21,6 +21,7 @@ const Container = styled.div`
     font-size: 1rem;
     align-items: center;
     padding-top: 0.5rem;
+    cursor: pointer;
 `
 
 // const Text = styled.div`
