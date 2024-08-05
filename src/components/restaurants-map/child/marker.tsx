@@ -1,16 +1,14 @@
-import { faBeerMugEmpty, faBowlFood, faGlobe, faMap, faMartiniGlassCitrus } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { InfoWindowF, MarkerF } from "@react-google-maps/api";
-import { Restaurant } from "entity/restaurant/restaurant";
+import { InfoWindowF } from "@react-google-maps/api";
 import { RestaurantInfo } from "./restaurant-info";
 import { MenuInfo } from "./menu-info";
 import styled , { createGlobalStyle } from "styled-components";
+import type { Restaurant } from "state/types";
 
 interface Props {
     selectedRestaurnt: Restaurant
     setSelectedRestaurant : React.Dispatch<React.SetStateAction<Restaurant | null>>
 }
-export const Marker: React.FC<Props> = ({ selectedRestaurnt, setSelectedRestaurant }) => {
+export const Marker: React.FC<Props> = ({ selectedRestaurnt }) => {
 
     const infoBoxOptions = {
         disableAutoPan: true,
@@ -66,9 +64,3 @@ const Container = styled.div`
     position: relative;
 `
 
-const CloseBtn = styled.div`
-    position: absolute;
-    top: 10px; 
-    right: 10px;
-    
-`

@@ -1,6 +1,6 @@
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { ThemeColor } from "data/const";
+import { ThemeColor } from "const/const";
 import { useState } from "react";
 import styled from "styled-components";
 

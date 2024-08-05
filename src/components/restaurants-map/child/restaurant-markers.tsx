@@ -1,19 +1,17 @@
-import { faBeerMugEmpty, faBowlFood, faGlobe, faMap, faMartiniGlassCitrus } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
-import { InfoWindow, InfoWindowF, MarkerF } from "@react-google-maps/api";
-import { restaurantSamples } from "entity/restaurant/restaurant"
-import type { Restaurant } from "entity/restaurant/restaurant";
+import { MarkerF } from "@react-google-maps/api";
 import { useState } from "react";
-import styled from "styled-components";
 import { Marker } from "./marker";
+import { useRestaurantContext } from "state/store";
+import type { Restaurant } from "state/types";
 
 const RestaurantMarkers = () => {
+    const restaurants = useRestaurantContext().restaurants; 
+    
     const [selectedRestaurant, setSelectedRestaurant] = useState<Restaurant | null>(null);
 
     return (
         <div>
-            {restaurantSamples.map(( restaurant ) => {
+            {restaurants.map(( restaurant ) => {
                 return (
                     <div key={restaurant.id}>
                         <MarkerF
