@@ -1,6 +1,6 @@
 import { useCallback, useState } from "react";
 import TableRowDetail from "./table-row-detail";
-import { Restaurant } from "../../../entity/restaurant/restaurant";
+import type { Restaurant } from "state/types";
 
 interface TableRowProps{
     restaurant: Restaurant
@@ -24,7 +24,7 @@ const TableRow = ({ restaurant }: TableRowProps) => {
                 <td>{restaurant.food ? "yes" : "no"}</td>
                 <td>{restaurant.drink ? "yes" : "no"}</td>
                 <td>
-                    <a href={restaurant.googleMap} target="_blank">click</a>
+                    <a href={restaurant.googleMap} target="_blank" rel="noreferrer">click</a>
                 </td>
                 <td><button onClick={handleClick}>Click</button></td>
             </tr>

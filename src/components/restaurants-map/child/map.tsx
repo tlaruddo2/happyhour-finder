@@ -1,21 +1,19 @@
-import { GoogleMap, LoadScript, useLoadScript, } from "@react-google-maps/api";
-import { useMemo, useState } from "react";
+import { GoogleMap, LoadScript } from "@react-google-maps/api";
+import { useMemo } from "react";
 import RestaurantMarkers from "./restaurant-markers";
 import CurrentLocationMarker from "./current-location-marker"
-import { Coord } from "pages/home";
 import SearchBar from "components/search-bar/search-bar";
+import type { Coord } from "state/types";
 
-interface MapProps{ 
-    date: string,
-    time: string,
-    address: string,    
+
+interface MapProps{   
     currentCoord: Coord,
     setCurrentCoord: React.Dispatch<React.SetStateAction<Coord>>
 }
 
 const libraries: ("places")[] = ["places"];
 
-const Map = ({ date, time, address, currentCoord, setCurrentCoord }: MapProps) => { 
+const Map = ({ currentCoord, setCurrentCoord }: MapProps) => { 
     // const { isLoaded } = useLoadScript({ googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAP_API_KEY!})
 
     const mapOptions = useMemo(() => ({

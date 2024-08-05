@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { ThemeColor } from "data/const";
+import { ThemeColor } from "const/const";
 
 export const Container = styled.div`
     

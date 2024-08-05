@@ -1,10 +1,10 @@
-import { Restaurant } from "entity/restaurant/restaurant";
 import { Column, Container, Name, Description } from "./styled/card.styled";
 import { Days } from "./days";
 import { HappryhourType } from "./HarryhourType";
 import { Contact } from "./Contact";
 import { Distance } from "../Distance";
 import { Details } from "./details";
+import { Restaurant } from "state/types";
 
 interface Props{
     restaurant: Restaurant;

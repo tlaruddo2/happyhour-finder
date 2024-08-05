@@ -1,10 +1,7 @@
 import styled from "styled-components"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
-import { ThemeColor } from "data/const";
-import { Coord } from "pages/home";
 import { Autocomplete } from "@react-google-maps/api";
 import { useRef } from "react";
+import type { Coord } from "state/types";
 
 interface SearchBarProps { 
     // setDate: React.Dispatch<React.SetStateAction<string>>;

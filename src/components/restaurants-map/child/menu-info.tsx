@@ -1,7 +1,7 @@
-import { Restaurant } from "entity/restaurant/restaurant"
 import styled from "styled-components"
 import { faCircleInfo, faMap, faPhone } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import type { Restaurant } from "state/types"
 
 interface Props {
     restaurant: Restaurant

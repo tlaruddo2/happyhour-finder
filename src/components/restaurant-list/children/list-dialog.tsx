@@ -1,33 +1,38 @@
 import React, { useState, useRef, useEffect } from "react";
-import { Restaurant, restaurantSamples } from "entity/restaurant/restaurant"
 import { CardContainer, Container } from "./styled/list-dialog.styled"
 import { Card } from "./card";
 import { DetailedCard } from "./detailed-card";
+import { useRestaurantContext } from "state/store";
+import { Restaurant } from "state/types";
 
 interface Props{
     isSelected: boolean
 }
 export const ListDialog: React.FC<Props> = ({ isSelected }) => {
+    const restaurantContext = useRestaurantContext();
+    const restaurants = restaurantContext.restaurants;
+    
     const [ isCardClicked, setIsCardClicked ] = useState<boolean>(false);
-    const [ selectedRestaurant, setSelectedRestaurant ] = useState<Restaurant>(restaurantSamples[0]);
+    const [ selectedRestaurant, setSelectedRestaurant ] = useState<Restaurant>(restaurants[0]);
     const containerRef = useRef<HTMLDivElement>(null);
     const [ currentTop, setCurrentTop ] = useState<number>(0); 
 
     useEffect(() => {
+        const containter = containerRef.current;
         const handleScroll = () => {
-            if (containerRef.current) {
-                const scrollTop = containerRef.current.scrollTop;
+            if (containter) {
+                const scrollTop = containter.scrollTop;
                 setCurrentTop(scrollTop);
             }
         };
 
-        if (containerRef.current) {
-            containerRef.current.addEventListener('scroll', handleScroll);
+        if (containter) {
+            containter.addEventListener('scroll', handleScroll);
         }
 
         return () => {
-            if (containerRef.current) {
-                containerRef.current.removeEventListener('scroll', handleScroll);
+            if (containter) {
+                containter.removeEventListener('scroll', handleScroll);
             }
         };
     }, []);
@@ -36,7 +41,7 @@ export const ListDialog: React.FC<Props> = ({ isSelected }) => {
         <Container isSelected={isSelected} ref={containerRef}>
             {/* <SortDropDown/> */}
             <CardContainer>
-                {restaurantSamples.map((restaurnt, i) => {
+                {restaurants.map((restaurnt, i) => {
                     return (
                         <Card 
                             key={i}

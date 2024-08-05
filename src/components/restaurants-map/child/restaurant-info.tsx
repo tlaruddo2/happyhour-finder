@@ -1,4 +1,4 @@
-import { Restaurant } from "entity/restaurant/restaurant"
+import type { Restaurant } from "state/types"
 import styled from "styled-components"
 
 interface Props {

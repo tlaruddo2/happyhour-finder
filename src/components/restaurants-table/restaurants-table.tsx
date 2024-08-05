@@ -2,8 +2,9 @@ import TableRow from "./child/table-row";
 import TableHead from "./child/table-head";
 import styled from "styled-components";
 import Table from 'react-bootstrap/Table';
-import { Restaurant, restaurantSamples } from "../../entity/restaurant/restaurant";
-import { checkInTimeRange } from "functions";
+import { checkInTimeRange } from "helper";
+import type { Restaurant } from "state/types";
+import { useRestaurantContext } from "state/store";
 
 
 interface RestaurantTableProps{
@@ -12,8 +13,9 @@ interface RestaurantTableProps{
     address: string,
 }
 const RestaurantsTable = ({ date, time, address }: RestaurantTableProps) => {
+    const restaurants = useRestaurantContext().restaurants;
 
-    const filteredSamples: Restaurant[] = restaurantSamples.filter((restaurant) => 
+    const filteredSamples: Restaurant[] = restaurants.filter((restaurant) => 
         restaurant.address.includes(address) && checkInTimeRange(restaurant.startTime, restaurant.endTime, time) && restaurant.day.includes(date)
     );
 
