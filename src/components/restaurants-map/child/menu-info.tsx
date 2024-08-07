@@ -9,7 +9,7 @@ interface Props {
 export const MenuInfo: React.FC<Props> = ({ restaurant }) => {
     return (
         <Container>
-            <HappryhourType isFood={restaurant.food} isDrink={restaurant.drink}/>
+            {/* <HappryhourType isFood={restaurant.food} isDrink={restaurant.drink}/> */}
             <Contact googleMap={restaurant.googleMap} phone={restaurant.phone}/>
         </Container>
     )

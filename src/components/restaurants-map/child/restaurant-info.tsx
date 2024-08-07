@@ -1,69 +1,105 @@
+import { faCompass, faMap } from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { useState } from "react"
 import type { Restaurant } from "state/types"
 import styled from "styled-components"
+import { MenuInfo } from "./menu-info"
+import RestaurantDetails from "./restaurant-details"
 
 interface Props {
     restaurant: Restaurant
 }
 export const RestaurantInfo: React.FC<Props> = ({ restaurant }) => {
+    const [ detailsClicked, setDetailsClicked] = useState(false);
+
+    const handleDetailsBtnClick = () => {
+        setDetailsClicked(!detailsClicked);
+        console.log(detailsClicked);
+    }
+
     return (
         <Container>
-            <Name>{restaurant.name}</Name>
-            {/* <Description>{restaurant.detail}</Description> */}
-            <Days days={restaurant.day}/>
-            <div style={{fontSize: '0.8rem'}}>{restaurant.startTime} ~ {restaurant.endTime}</div>
+            {!detailsClicked &&
+                <div>
+                    <Name>{restaurant.name}</Name>
+                    <Description>{restaurant.detail}</Description>
+                    <BusinessHours>
+                        <Days>{restaurant.day}</Days>
+                        <Hours>{restaurant.startTime} ~ {restaurant.endTime}</Hours>
+                    </BusinessHours>
+                    <Buttons>
+                        <div style={{display: "flex", width: "20%", justifyContent: "space-between"}}>
+                            <a href={restaurant.googleMap} target="'_blank'" style={{height: '35%', width: '35%'}}>
+                                <FontAwesomeIcon 
+                                    style={{paddingRight: '0.3rem', width: '100%', height: '100%'}}
+                                    icon={faMap} />
+                            </a>
+                            <a href={restaurant.webiste} target="'_blank'" style={{height: '35%', width: '35%'}}>
+                                <FontAwesomeIcon style={{paddingRight: '0.3rem', width: '100%', height: '100%',}}icon={faCompass} />
+                            </a> 
+                        </div>                    
+                        <DetailsBtn onClick={handleDetailsBtnClick}>View Details</DetailsBtn>
+                    </Buttons>
+                </div>
+            }
+            {/* { detailsClicked && <MenuInfo restaurant={restaurant}/>} */}
+            { detailsClicked && 
+                <RestaurantDetails setDetailsClicked={setDetailsClicked} restaurant={restaurant}/>
+            }
         </Container>
     )
 }
 
 const Container = styled.div`
-    width: 50%;
-    margin-right: 0.1rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 `
 
-export const Name = styled.h2`
+const Name = styled.h2`
     font-size: 1rem;
     font-weight: 700;
     margin-bottom: 0rem;
     width: 100%
 `
 
-export const Description = styled.div`
+const Description = styled.h4`
     font-size: 0.8rem;
     font-weight: 400;
     margin-bottom: 0.2rem;
 `
+const BusinessHours = styled.div`
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0.2em 0rem;
+`
 
+const Days = styled.div`
+    font-size: 0.8rem;
+`
 
-interface DaysProps{
-    days: string
-}
-const Days: React.FC<DaysProps> = ({ days }) => {
-    const text = [ 'M', 'T', 'W', 'T', 'F', 'S', 'S'];
-    const color = ['#FF0000', '#FFA500' ,'#FFFF00', '#008000', '#0000FF', '#4b0082', '#EE82EE']
-    let openDays = [false, false, false, false, false, false, false]
+const Hours = styled.div`
+    font-size: 0.8rem;
+`
 
-    if ( days.includes('Mon')) openDays[0] = true;
-    if ( days.includes('Tue')) openDays[1] = true;
-    if ( days.includes('Wed')) openDays[2] = true;
-    if ( days.includes('Thr')) openDays[3] = true;
-    if ( days.includes('Fri')) openDays[4] = true;
-    if ( days.includes('Sat')) openDays[5] = true;
-    if ( days.includes('Sun')) openDays[6] = true;
+const Buttons = styled.div`
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0.4rem 0rem;
+`
 
-    return (
-        <div style={{display: "flex", marginBottom: '0.3rem'}}>
-            {text.map((t,i) => {
-                return (
-                    <div style={{
-                        fontSize: '0.8rem',
-                        fontWeight: openDays[i] ? '1000' : '300',
-                        color: openDays[i] ? color[i] : 'grey',
-                        paddingRight: '1.5px'
-                    }}>
-                        {t}
-                    </div>
-                )
-            })}
-        </div>
-    )
-}
+const DetailsBtn = styled.div`
+    text-decoration: underline;
+    color: blue;
+
+    &:hover{
+        font-weight: 700;
+        color: blue;
+        cursor: pointer;
+    }
+`
