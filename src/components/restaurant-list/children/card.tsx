@@ -26,7 +26,7 @@ export const Card: React.FC<Props> = ({ restaurant, setIsCardClicked, setSelecte
                 <div style={{fontSize: '0.8rem'}}>{restaurant.startTime} ~ {restaurant.endTime}</div>
             </Column>
             <Column style={{alignItems: "flex-end"}}>
-                <HappryhourType isFood={restaurant.food} isDrink={restaurant.drink}/>
+                {/* <HappryhourType isFood={restaurant.food} isDrink={restaurant.drink}/> */}
                 <Contact googleMap={restaurant.googleMap} phone={restaurant.phone}/>
                 <Distance/>
                 <Details clickHandler={clickHandler}/>

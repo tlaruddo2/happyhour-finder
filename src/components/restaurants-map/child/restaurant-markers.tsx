@@ -4,11 +4,14 @@ import { Marker } from "./marker";
 import { useRestaurantContext } from "state/store";
 import type { Restaurant } from "state/types";
 
-const RestaurantMarkers = () => {
+
+interface Props {
+    selectedRestaurant: Restaurant | null;
+    setSelectedRestaurant: React.Dispatch<React.SetStateAction<Restaurant | null>>
+}
+const RestaurantMarkers: React.FC<Props> = ({selectedRestaurant, setSelectedRestaurant}) => {
     const restaurants = useRestaurantContext().restaurants; 
     
-    const [selectedRestaurant, setSelectedRestaurant] = useState<Restaurant | null>(null);
-
     return (
         <div>
             {restaurants.map(( restaurant ) => {

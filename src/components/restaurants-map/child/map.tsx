@@ -1,9 +1,9 @@
 import { GoogleMap, LoadScript } from "@react-google-maps/api";
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
 import RestaurantMarkers from "./restaurant-markers";
 import CurrentLocationMarker from "./current-location-marker"
 import SearchBar from "components/search-bar/search-bar";
-import type { Coord } from "state/types";
+import type { Coord, Restaurant } from "state/types";
 
 
 interface MapProps{   
@@ -14,6 +14,8 @@ interface MapProps{
 const libraries: ("places")[] = ["places"];
 
 const Map = ({ currentCoord, setCurrentCoord }: MapProps) => { 
+    const [selectedRestaurant, setSelectedRestaurant] = useState<Restaurant | null>(null);
+
     // const { isLoaded } = useLoadScript({ googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAP_API_KEY!})
 
     const mapOptions = useMemo(() => ({
@@ -33,12 +35,12 @@ const Map = ({ currentCoord, setCurrentCoord }: MapProps) => {
                 zoom={15} 
                 center={center} 
                 mapContainerStyle={{width: "100%", height: "100%"}} 
-                onClick={() => console.log("map click")}
+                onClick={() => setSelectedRestaurant(null)}
                 options={mapOptions}
             >
                 <SearchBar setCurrentCoord={setCurrentCoord}/>
                 <CurrentLocationMarker lat={currentCoord.lat} lng={currentCoord.lng}/>
-                <RestaurantMarkers/>
+                <RestaurantMarkers setSelectedRestaurant={setSelectedRestaurant} selectedRestaurant={selectedRestaurant}/>
             </GoogleMap>
         </LoadScript>
     )

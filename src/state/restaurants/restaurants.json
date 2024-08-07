@@ -5,10 +5,21 @@
         "address": "1185 Robson St, Vancouver, BC V6E 1B5",
         "startTime": "14:00", 
         "endTime": "17:00",
-        "day": "Mon Tue Wed Thr Fri Sat Sun", 
-        "food": true, 
-        "drink": true, 
+        "day": "All days", 
+        "food": [
+            { "name": "food", "price": "$10" },
+            { "name": "food", "price": "$10" },
+            { "name": "food", "price": "$10" },
+            { "name": "food", "price": "$10" },
+            { "name": "food", "price": "$10" },
+            { "name": "food", "price": "$10" }
+        ], 
+        "drink": [
+            { "name": "beer", "price": "$10" },
+            { "name": "beer", "price": "$10" }
+        ],
         "googleMap": "https://maps.app.goo.gl/rmMiKsTsDmGALtss7",
+        "webiste": "https://www.google.ca",
         "detail": "Comfort Food Restaurant",
         "lat": 49.285927, 
         "lng": -123.126567,
@@ -21,10 +32,17 @@
         "address": "820 Burrard St, Vancouver, BC V6Z 1X9",
         "startTime": "14:00", 
         "endTime": "17:00",
-        "day": "Mon Tue Wed Thr Fri Sat Sun", 
-        "food": true, 
-        "drink": true, 
+        "day": "All days", 
+        "food": [
+            { "name": "food", "price": "$10" },
+            { "name": "food", "price": "$10" }
+        ], 
+        "drink": [
+            { "name": "beer", "price": "$10" },
+            { "name": "beer", "price": "$10" }
+        ],
         "googleMap": "https://maps.app.goo.gl/apxNAQS15B4t7uch7",
+        "webiste": "https://www.google.ca",
         "detail": "Comfort Food Restaurant",
         "lat": 49.282588813358075,
         "lng": -123.12317349531799,
@@ -37,10 +55,17 @@
         "address": "777 Thurlow St, Vancouver, BC V6E 3V5",
         "startTime": "15:00", 
         "endTime": "17:00",
-        "day": "Mon Tue Wed Thr Fri Sat Sun", 
-        "food": true, 
-        "drink": true, 
+        "day": "All days", 
+        "food": [
+            { "name": "food", "price": "$10" },
+            { "name": "food", "price": "$10" }
+        ], 
+        "drink": [
+            { "name": "beer", "price": "$10" },
+            { "name": "beer", "price": "$10" }
+        ],
         "googleMap": "https://maps.app.goo.gl/dEBwPs3XpdE9Vxbi7",
+        "webiste": "https://www.google.ca",
         "detail": "Seafoor Restaurant",
         "lat": 49.28494626649928,
         "lng": -123.12455864593775,
@@ -53,10 +78,17 @@
         "address": "773 Hornby St, Vancouver, BC V6Z 1S4",
         "startTime": "15:00", 
         "endTime": "18:00",
-        "day": "Mon Tue Wed Thr Fri Sat Sun", 
-        "food": true, 
-        "drink": true, 
+        "day": "All days", 
+        "food": [
+            { "name": "food", "price": "$10" },
+            { "name": "food", "price": "$10" }
+        ], 
+        "drink": [
+            { "name": "beer", "price": "$10" },
+            { "name": "beer", "price": "$10" }
+        ],
         "googleMap": "https://maps.app.goo.gl/s9EFP97CRruSUzPL7",
+        "webiste": "https://www.google.ca",
         "detail": "Italian Restaurant",
         "lat": 49.28298500000001,
         "lng": -123.12151987702227,

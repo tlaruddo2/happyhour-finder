@@ -1,6 +1,11 @@
 import { createContext, useReducer, useContext, useEffect, useCallback } from "react";
 import restaurantsData from './restaurants.json'
 
+export type menu = {
+    name: string,
+    price: string
+}
+
 export type Restaurant = { 
     id: number;
     name: string;
@@ -8,9 +13,10 @@ export type Restaurant = {
     startTime: string;
     endTime: string;
     day: string;
-    food: boolean;
-    drink: boolean;
+    food: menu[];
+    drink: menu[];
     googleMap: string;
+    webiste: string;
     detail: string;
     lat: number,
     lng: number,
