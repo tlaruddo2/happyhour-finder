@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { useState } from "react"
 import type { Restaurant } from "state/types"
 import styled from "styled-components"
-import { MenuInfo } from "./menu-info"
+// import { MenuInfo } from "./menu-info"
 import RestaurantDetails from "./restaurant-details"
 
 interface Props {

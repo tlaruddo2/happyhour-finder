@@ -1,9 +1,9 @@
 import { InfoWindowF } from "@react-google-maps/api";
 import { RestaurantInfo } from "./restaurant-info";
-import { MenuInfo } from "./menu-info";
+// import { MenuInfo } from "./menu-info";
 import styled , { createGlobalStyle } from "styled-components";
 import type { Restaurant } from "state/types";
-import { useState } from "react";
+// import { useState } from "react";
 
 interface Props {
     selectedRestaurnt: Restaurant

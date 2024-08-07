@@ -1,5 +1,5 @@
 import { MarkerF } from "@react-google-maps/api";
-import { useState } from "react";
+// import { useState } from "react";
 import { Marker } from "./marker";
 import { useRestaurantContext } from "state/store";
 import type { Restaurant } from "state/types";
