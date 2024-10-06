@@ -18,7 +18,7 @@ const Home = () => {
     return (
         <Layout>    
             <Logo/>          
-            <CurrentLocationIcon/>
+            <CurrentLocationIcon setCurrentCoord={setCurrentCoord}/>
             <RestaurantsMap currentCoord={currentCoord} setCurrentCoord={setCurrentCoord}/>
             <RestaurantList/>
         </Layout>

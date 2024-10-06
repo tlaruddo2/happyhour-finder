@@ -1,12 +1,23 @@
 import { faLocation } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { ThemeColor } from "const/const"
+import { Coord } from "state/types"
 import styled from "styled-components"
 
-export const CurrentLocationIcon = () => {
+interface Props{
+    setCurrentCoord: React.Dispatch<React.SetStateAction<Coord>>
+}
+export const CurrentLocationIcon = ({ setCurrentCoord }: Props) => {
+
+    const changeCoord = () => {
+        navigator.geolocation.getCurrentPosition((position) => {   
+            setCurrentCoord({lat: position.coords.latitude, lng: position.coords.longitude});
+        });        
+    }
+
     return (
-        <Container>
-            <FontAwesomeIcon icon={faLocation} style={{color: ThemeColor.main, width: "80%", height: "80%"}}/>
+        <Container onClick={() => changeCoord()}>
+            <FontAwesomeIcon icon={faLocation} style={{color: ThemeColor.main, width: "65%", height: "65%"}}/>
         </Container>  
     )
 }
@@ -24,5 +35,9 @@ const Container = styled.div`
     justify-content: center;
     align-items: center;
     border-radius: 10px;
+    
+    &:hover {
+        cursor: pointer
+    }
 `
 
