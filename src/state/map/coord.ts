@@ -1,6 +1,4 @@
-// export type Coord = [lat: number, lng: number]
-
-export interface Coord{
+export type Coord = {
     lat: number, 
     lng: number
 }
