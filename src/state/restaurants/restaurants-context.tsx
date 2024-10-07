@@ -7,7 +7,7 @@ export type menu = {
     description?: string
 }
 
-type RestaurantType = "Pub/Bar" | "Dining" | "FineDining";
+export type RestaurantType = "Pub" | "Dining";
 
 type RestaurantDetailedType = 
     "Pub/Bar" | "Casual Dining" | "FineDining" | "Seafood" | "SportsBar" | "BrewPub" | 

@@ -16,19 +16,26 @@
         "lat": 49.285927, 
         "lng": -123.126567,
         "phone": "+16046690020",        
-        "happyhourHour": "", 
+        "happyhourHour": "happyhour hour", 
         "happyhourFood": [
+            { "name": "food", "price": "$10" },
+            { "name": "food", "price": "$10" },
+            { "name": "food", "price": "$10" },
+            { "name": "food", "price": "$10" },
             { "name": "food", "price": "$10" },
             { "name": "food", "price": "$10" }
         ],
-        "happyhourDrink": [],
+        "happyhourDrink": [
+            { "name": "food", "price": "$10" },
+            { "name": "food", "price": "$10" }
+        ],
         "isInfoOpend": false,
         "isInPromotion": false
     },
     {
         "id": 2, 
         "name": "Joey Burrard",
-        "type": "Dining", 
+        "type": "Pub", 
         "detailedType": "Casual Dining", 
         "description": "Comfort Food Restaurant",
         "address": "820 Burrard St, Vancouver, BC V6Z 1X9",
