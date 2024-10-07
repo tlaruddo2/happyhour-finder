@@ -18,7 +18,7 @@
         "phone": "+16046690020",        
         "happyhourHour": "happyhour hour", 
         "happyhourFood": [
-            { "name": "food", "price": "$10" },
+            { "name": "food", "price": "$10", "description": "hi"},
             { "name": "food", "price": "$10" },
             { "name": "food", "price": "$10" },
             { "name": "food", "price": "$10" },
