@@ -21,7 +21,7 @@ export const Card: React.FC<Props> = ({ restaurant, setIsCardClicked, setSelecte
         <Container>
             <Column>
             <Name>{restaurant.name}</Name>
-                <Description>{restaurant.detail}</Description>
+                <Description>{restaurant.detailedType}</Description>
                 <Days days={restaurant.day}/>
                 <div style={{fontSize: '0.8rem'}}>{restaurant.startTime} ~ {restaurant.endTime}</div>
             </Column>

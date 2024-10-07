@@ -22,7 +22,7 @@ export const RestaurantInfo: React.FC<Props> = ({ restaurant }) => {
             {!detailsClicked &&
                 <div>
                     <Name>{restaurant.name}</Name>
-                    <Description>{restaurant.detail}</Description>
+                    <Description>{restaurant.detailedType}</Description>
                     <BusinessHours>
                         <Days>{restaurant.day}</Days>
                         <Hours>{restaurant.startTime} ~ {restaurant.endTime}</Hours>
@@ -34,7 +34,7 @@ export const RestaurantInfo: React.FC<Props> = ({ restaurant }) => {
                                     style={{paddingRight: '0.3rem', width: '100%', height: '100%'}}
                                     icon={faMap} />
                             </a>
-                            <a href={restaurant.webiste} target="'_blank'" style={{height: '35%', width: '35%'}}>
+                            <a href={restaurant.website} target="'_blank'" style={{height: '35%', width: '35%'}}>
                                 <FontAwesomeIcon style={{paddingRight: '0.3rem', width: '100%', height: '100%',}}icon={faCompass} />
                             </a> 
                         </div>                    
