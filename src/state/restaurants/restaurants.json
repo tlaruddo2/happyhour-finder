@@ -15,6 +15,7 @@
         "website": "https://www.google.ca",
         "lat": 49.285927, 
         "lng": -123.126567,
+        "distance" : 0,
         "phone": "+16046690020",        
         "happyhourHour": "happyhour hour", 
         "happyhourFood": [
@@ -48,6 +49,7 @@
         "website": "https://www.google.ca",
         "lat": 49.282588813358075,
         "lng": -123.12317349531799,
+        "distance" : 0,
         "phone": "+16046835639",
         "happyhourHour": "", 
         "happyhourFood": [
