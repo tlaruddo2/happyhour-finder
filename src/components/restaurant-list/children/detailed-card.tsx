@@ -22,21 +22,22 @@ export const DetailedCard: React.FC<Props> = ({ clickHandler, restaurant, curren
                     <Menu key={i}>
                         <div>
                             <Name>{food.name}</Name>
-                            {food.description && <Description>{food.description}</Description>}
+                            {food.description && <Description>- {food.description}</Description>}
                         </div>
                         <Price>{food.price}</Price>
                     </Menu>
                 )
             })}
+            <div style={{height: '1rem'}}></div>
             <SubTitle>Drink</SubTitle>
-            {restaurant.happyhourDrink.map((food,i) => {
+            {restaurant.happyhourDrink.map((drink,i) => {
                 return (
                     <Menu key={i}>
                         <div>
-                            <Name>{food.name}</Name>
-                            {food.description && <Description>{food.description}</Description>}
+                            <Name>{drink.name}</Name>
+                            {drink.description && <Description>{drink.description}</Description>}
                         </div>
-                        <Price>{food.price}</Price>
+                        <Price>{drink.price}</Price>
                     </Menu>
                 )
             })}            
