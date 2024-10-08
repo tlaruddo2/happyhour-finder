@@ -13,12 +13,13 @@ const RestaurantDetails: React.FC<Props> = ({ setDetailsClicked, restaurant }) =
                 <Title>Drinks</Title>
                 <BackBtn onClick={()=>setDetailsClicked(false)}>{'<-'} Back</BackBtn>
             </FirstRow>
-            {restaurant.food.map((f, i) => {
-                return <RestaurantDetailsRow name={f.name} price={f.price}/>
+            {restaurant.happyhourDrink.map((f, i) => {
+                return <RestaurantDetailsRow key={i} name={f.name} price={f.price}/>
             })}
+            <Divider/>
             <Title>Food</Title>
-            {restaurant.drink.map((d,i) => {
-                return <RestaurantDetailsRow name={d.name} price={d.price}/>
+            {restaurant.happyhourFood.map((d,i) => {
+                return <RestaurantDetailsRow key={i} name={d.name} price={d.price}/>
             })}                    
         </Container>
     )
@@ -30,6 +31,14 @@ const Container = styled.div`
 `
 const BackBtn = styled.div`
     cursor: pointer;
+    text-decoration: underline;
+    color: blue;
+
+    &:hover{
+        font-weight: 700;
+        color: blue;
+        cursor: pointer;
+    }    
 `
 
 const Title = styled.div`
@@ -41,7 +50,13 @@ const Title = styled.div`
 const FirstRow = styled.div`
     width: 100%; 
     display: flex; 
-    justify-content: space-between
+    justify-content: space-between;
 `
 
+const Divider = styled.div`
+    height: 0.1rem; 
+    background-color: #b6b4b4;
+    margin: 0.3rem 0rem;
+    
+`
 export default RestaurantDetails;

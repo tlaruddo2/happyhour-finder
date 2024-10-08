@@ -1,4 +1,4 @@
-import { Column, Container, Name, Description } from "./styled/card.styled";
+import { Column, Container, Name, DetailedType, Description, TextBtn } from "./styled/card.styled";
 import { Days } from "./days";
 // import { HappryhourType } from "./HarryhourType";
 import { Contact } from "./Contact";
@@ -12,7 +12,7 @@ interface Props{
     setSelectedRestaurant: React.Dispatch<React.SetStateAction<Restaurant>>
 }
 export const Card: React.FC<Props> = ({ restaurant, setIsCardClicked, setSelectedRestaurant }) => {
-    const clickHandler = () => {
+    const detailClickHandler = () => {
         setIsCardClicked(true);
         setSelectedRestaurant(restaurant);
     }
@@ -21,15 +21,14 @@ export const Card: React.FC<Props> = ({ restaurant, setIsCardClicked, setSelecte
         <Container>
             <Column>
             <Name>{restaurant.name}</Name>
-                <Description>{restaurant.detail}</Description>
-                <Days days={restaurant.day}/>
-                <div style={{fontSize: '0.8rem'}}>{restaurant.startTime} ~ {restaurant.endTime}</div>
+                <DetailedType>{restaurant.detailedType}</DetailedType>
+                <Description>{restaurant.description}</Description>
+                <Description>{restaurant.happyhourHour}</Description>
             </Column>
             <Column style={{alignItems: "flex-end"}}>
-                {/* <HappryhourType isFood={restaurant.food} isDrink={restaurant.drink}/> */}
                 <Contact googleMap={restaurant.googleMap} phone={restaurant.phone}/>
                 <Distance/>
-                <Details clickHandler={clickHandler}/>
+                <TextBtn onClick={detailClickHandler}>Details</TextBtn>
             </Column>
         </Container>        
     )

@@ -4,11 +4,22 @@ import restaurantsData from './restaurants.json'
 export type menu = {
     name: string,
     price: string
+    description?: string
 }
 
+export type RestaurantType = "Pub" | "Dining";
+
+type RestaurantDetailedType = 
+    "Pub/Bar" | "Casual Dining" | "FineDining" | "Seafood" | "SportsBar" | "BrewPub" | 
+    "Tapas" | "ViewBar" | "Latin" | "Asian" | "Pizza" | "WineBar";
+
 export type Restaurant = { 
+    // General Info
     id: number;
     name: string;
+    type: RestaurantType;
+    detailedType: RestaurantDetailedType;
+    description: string;
     address: string;
     startTime: string;
     endTime: string;
@@ -16,12 +27,26 @@ export type Restaurant = {
     food: menu[];
     drink: menu[];
     googleMap: string;
-    webiste: string;
-    detail: string;
+    website: string;
     lat: number,
     lng: number,
-    isInfoOpend: boolean,
     phone: string,
+
+    //happyhour
+    happyhourHour: string;
+    happyhourFood: menu[];
+    happyhourDrink: menu[];
+
+    //promotion
+    promoionStartDate?: string;
+    promoionEndDate?: string;
+    promotionHour?: string;
+    promotionFood?: menu[];
+    promotinoDrink?: menu[];    
+
+    //for devloper 
+    isInfoOpend: boolean,
+    isInPromotion: boolean,
 }
 
 type RestaurantState = {
@@ -56,7 +81,7 @@ function useRestaurantSource(): {
 
     useEffect(() => {
         const fetchRestaurants = async () => {
-            dispatch({ type: "setRestaurants", payload: restaurantsData })
+            dispatch({ type: "setRestaurants", payload: restaurantsData as Restaurant[] })
         };
         fetchRestaurants();
     }, []);

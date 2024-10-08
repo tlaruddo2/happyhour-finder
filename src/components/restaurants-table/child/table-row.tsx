@@ -28,7 +28,7 @@ const TableRow = ({ restaurant }: TableRowProps) => {
                 </td>
                 <td><button onClick={handleClick}>Click</button></td>
             </tr>
-            {isButtonClicked && <TableRowDetail detail={restaurant.detail}/>}
+            {isButtonClicked && <TableRowDetail detail={restaurant.description}/>}
         </tbody>
     )
 }

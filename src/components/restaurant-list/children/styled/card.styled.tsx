@@ -20,7 +20,22 @@ export const Name = styled.h2`
     font-weight: 700;
 `
 
+export const DetailedType = styled.div`
+    font-size: 0.8rem;
+    font-weight: 400;
+`
+
 export const Description = styled.div`
     font-size: 0.8rem;
-    font-weight: 400
+    font-weight: 400;
+`
+
+export const TextBtn = styled.div`
+    font-size: 0.8rem;
+    text-decoration: underline;
+    color: blue;
+
+    &:hover{
+        font-weight: 700;
+    }
 `
