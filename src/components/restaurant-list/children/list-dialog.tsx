@@ -38,7 +38,7 @@ export const ListDialog: React.FC<Props> = ({ isSelected }) => {
     }, []);
     
     return (    
-        <Container isSelected={isSelected} ref={containerRef}>
+        <Container $isSelected={isSelected} ref={containerRef}>
             {/* <SortDropDown/> */}
             <CardContainer>
                 {restaurants.map((restaurnt, i) => {
