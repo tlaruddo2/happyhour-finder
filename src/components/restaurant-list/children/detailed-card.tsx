@@ -1,6 +1,4 @@
 import { Container } from "./styled/detailed-card.styled"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faArrowLeft } from "@fortawesome/free-solid-svg-icons"
 import styled from "styled-components"
 import type { Restaurant } from "state/types"
 

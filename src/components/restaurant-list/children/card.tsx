@@ -1,9 +1,6 @@
 import { Column, Container, Name, DetailedType, Description, TextBtn } from "./styled/card.styled";
-import { Days } from "./days";
-// import { HappryhourType } from "./HarryhourType";
 import { Contact } from "./Contact";
 import { Distance } from "../Distance";
-import { Details } from "./details";
 import { Restaurant } from "state/types";
 
 interface Props{
