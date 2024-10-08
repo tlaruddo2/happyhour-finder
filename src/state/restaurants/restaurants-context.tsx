@@ -30,6 +30,7 @@ export type Restaurant = {
     website: string;
     lat: number,
     lng: number,
+    distance: number,
     phone: string,
 
     //happyhour

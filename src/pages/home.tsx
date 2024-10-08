@@ -20,7 +20,7 @@ const Home = () => {
             <Logo/>          
             <CurrentLocationIcon setCurrentCoord={setCurrentCoord}/>
             <RestaurantsMap currentCoord={currentCoord} setCurrentCoord={setCurrentCoord}/>
-            <RestaurantList/>
+            <RestaurantList currentCoord={currentCoord}/>
         </Layout>
     )
 }

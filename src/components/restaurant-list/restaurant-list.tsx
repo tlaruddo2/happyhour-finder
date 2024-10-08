@@ -1,10 +1,15 @@
+import type { Coord } from "state/types";
 import { faList } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
 import { ListDialog } from "./children/list-dialog";
 import { Container, ListButton } from "./restaurant-list.styled";
 
-const RestaurantList = () => {
+
+interface Props {
+    currentCoord: Coord
+}
+const RestaurantList: React.FC<Props> = ({ currentCoord }) => {
     const [isSelected, setIsSelected] = useState(false)
     const clickHandler = () => setIsSelected(!isSelected)
 
@@ -14,7 +19,7 @@ const RestaurantList = () => {
                 <FontAwesomeIcon icon={faList} />
                 <div style={{marginLeft: "10px"}}>List</div>
             </ListButton>       
-            <ListDialog isSelected={isSelected}/>
+            <ListDialog currentCoord={currentCoord} isSelected={isSelected}/>
         </Container>
     )
 }

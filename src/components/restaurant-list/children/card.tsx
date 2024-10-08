@@ -1,6 +1,5 @@
 import { Column, Container, Name, DetailedType, Description, TextBtn } from "./styled/card.styled";
 import { Contact } from "./Contact";
-import { Distance } from "../Distance";
 import { Restaurant } from "state/types";
 
 interface Props{
@@ -24,7 +23,7 @@ export const Card: React.FC<Props> = ({ restaurant, setIsCardClicked, setSelecte
             </Column>
             <Column style={{alignItems: "flex-end"}}>
                 <Contact googleMap={restaurant.googleMap} phone={restaurant.phone}/>
-                <Distance/>
+                <div style={{fontSize: '0.9rem'}}>{restaurant.distance.toFixed(2)} km</div>
                 <TextBtn onClick={detailClickHandler}>Details</TextBtn>
             </Column>
         </Container>        
