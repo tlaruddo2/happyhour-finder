@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 interface ListContainerProps {
-    isSelected: boolean;
+    $isSelected: boolean;
 }
 export const Container = styled.div<ListContainerProps>`
     position: absolute;
@@ -18,7 +18,7 @@ export const Container = styled.div<ListContainerProps>`
     z-index: 1;
     overflow-y: auto;
 
-    ${({ isSelected }) => isSelected && `
+    ${({ $isSelected }) => $isSelected && `
         // top: 50%;
         // left: 50%;
         transform: translate(-50%,-130%);
