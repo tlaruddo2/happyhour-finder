@@ -17,14 +17,14 @@ const RestaurantMarkers: React.FC<Props> = ({selectedRestaurant, setSelectedRest
         if (restaurantType === "Dining")
             iconUrl = "https://cdn-icons-png.freepik.com/512/8280/8280802.png";
         if (restaurantType ===  "Pub")
-            iconUrl = "https://cdn-icons-png.freepik.com/512/684/684415.png"; 
+            iconUrl = "https://png.pngtree.com/png-vector/20190527/ourlarge/pngtree-beer-icon-png-image_1105732.jpg"; 
 
         const  icon = {
             url: iconUrl,
             // size: new google.maps.Size(20, 32), 
             // origin: new google.maps.Point(0, 0),
             anchor: new google.maps.Point(0, 32), 
-            scaledSize: new google.maps.Size(20, 32), 
+            scaledSize: new google.maps.Size(20, 32)
         }
 
         return icon;     
@@ -53,3 +53,5 @@ const RestaurantMarkers: React.FC<Props> = ({selectedRestaurant, setSelectedRest
 }
 
 export default RestaurantMarkers;
+
+

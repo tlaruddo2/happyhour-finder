@@ -10,19 +10,19 @@ const Logo = () => {
     return (
         <>
             <TitleContainer>
-                <Menu onClick={()=>{setMenuClicked(!menuClicked); console.log("click")}}>
+                <Menu onClick={()=>{setMenuClicked(!menuClicked);}}>
                     <FontAwesomeIcon icon={faBars} />
                 </Menu>
                 <Title href="/">
-                    Happy<br/>Hour
+                    Happy<div style={{height: '0.1rem'}}/>Hour
                 </Title>            
             </TitleContainer>
             {menuClicked && 
                 <div style={{position: "fixed", left: "2%", top: "calc(7% + 10px)", zIndex: 1, marginTop: "0.5rem", fontSize: "0.9rem"}}>
-                    <div style={{ border: "none", backgroundColor: "#6cd082", zIndex: 1, borderRadius: "10px", padding: "5px", color: "white", marginBottom: "0.2rem"}}>
+                    <div style={{ border: "none", backgroundColor: "#6cd082", zIndex: 1, borderRadius: "10px", padding: "5px", color: "white", marginBottom: "0.2rem", textAlign: "center"}}>
                         About Us
                     </div>
-                    <div style={{border: "none", backgroundColor: "#6cd082", zIndex: 1, borderRadius: "10px", padding: "5px", color: "white"}}>
+                    <div style={{border: "none", backgroundColor: "#6cd082", zIndex: 1, borderRadius: "10px", padding: "5px", color: "white", textAlign: "center"}}>
                         Send Email
                     </div>   
                 </div>             
