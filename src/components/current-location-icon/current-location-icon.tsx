@@ -27,8 +27,8 @@ const Container = styled.div`
     position: fixed;
     right: 2%;
     bottom: 2%;
-    height: 5%;
-    width: 5%;
+    height: 2.5rem;
+    width: 2.5rem;
     background-color: white;
     z-index: 1;
     display: flex;

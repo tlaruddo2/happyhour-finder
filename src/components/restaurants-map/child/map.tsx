@@ -16,11 +16,71 @@ const libraries: ("places")[] = ["places"];
 const Map = ({ currentCoord, setCurrentCoord }: MapProps) => { 
     const [selectedRestaurant, setSelectedRestaurant] = useState<Restaurant | null>(null);
 
-    // const { isLoaded } = useLoadScript({ googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAP_API_KEY!})
+    const mapStyles = [
+        {
+            "elementType": "geometry",
+            "stylers": [
+                { "saturation": -20 },
+                { "lightness": 50 }   
+            ]
+        },
+        {
+            "elementType": "labels.icon",
+            "stylers": [
+                { "visibility": "on" },
+                { "saturation": -50 },
+                { "lightness": 50 }   
+            ]
+        },
+        {
+            "elementType": "labels.text.fill",
+            "stylers": [
+                { "saturation": -30 },
+                { "lightness": 50 }   
+            ]
+        },
+        {
+            "elementType": "labels.text.stroke",
+            "stylers": [
+                { "visibility": "off" }
+            ]
+        },
+        {
+            "featureType": "road",
+            "elementType": "geometry",
+            "stylers": [
+                { "saturation": -30 }, 
+                { "lightness": 10 }    
+            ]
+        },
+        {
+            "featureType": "poi",
+            "elementType": "geometry",
+            "stylers": [
+                { "saturation": -40 }, 
+                { "lightness": 20 }    
+            ]
+        },
+        {
+            "featureType": "water",
+            "elementType": "geometry",
+            "stylers": [
+                { "saturation": -20 }, 
+                { "lightness": 10 }    
+            ]
+        },
+        {
+            "featureType": "transit",
+            "stylers": [
+                { "visibility": "off" }
+            ]
+        }
+    ];    
 
     const mapOptions = useMemo(() => ({
         fullscreenControl: false,
         disableDefaultUI: true,
+        styles: mapStyles
     }), []);
 
     
