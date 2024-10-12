@@ -10,7 +10,7 @@ export type menu = {
 export type RestaurantType = "Pub" | "Dining";
 
 type RestaurantDetailedType = 
-    "Pub/Bar" | "Casual Dining" | "FineDining" | "Seafood" | "SportsBar" | "BrewPub" | 
+    "Pub" | "Casual Dining" | "FineDining" | "Seafood" | "SportsBar" | "BrewPub" | 
     "Tapas" | "ViewBar" | "Latin" | "Asian" | "Pizza" | "WineBar";
 
 export type Restaurant = { 
