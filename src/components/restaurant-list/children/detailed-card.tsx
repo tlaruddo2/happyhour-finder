@@ -5,14 +5,12 @@ import type { Restaurant } from "state/types"
 interface Props{
     clickHandler: () => void
     restaurant: Restaurant
-    currentTop: number
     isClicked: boolean
 }
-export const DetailedCard: React.FC<Props> = ({ clickHandler, restaurant, currentTop, isClicked }) => {
-    // console.log(restaurant);
-    
+export const DetailedCard: React.FC<Props> = ({ clickHandler, restaurant, isClicked }) => {
+        
     return ( 
-        <Container currentTop={currentTop} isClicked={isClicked}>
+        <Container isClicked={isClicked}>
             <BackBtn onClick={clickHandler}>{'< '}Back</BackBtn>
             <SubTitle>Food</SubTitle>
             {restaurant.happyhourFood.map((food,i) => {
