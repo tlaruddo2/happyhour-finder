@@ -84,6 +84,15 @@ const SearchInput = styled.input`
     border-radius: 10px;
     width: 100%;
     font-size: 0.8rem;
+
+    &:focus {
+        outline: none;
+        font-size: 16px;
+
+        &::placeholder {
+            color: #ffffff;
+        }        
+    }
 `
 
 const AutocompleteWrapper = styled.div`

@@ -34,30 +34,8 @@ export const ListDialog: React.FC<Props> = ({ isSelected, currentCoord }) => {
     
     const [ isCardClicked, setIsCardClicked ] = useState<boolean>(false);
     const [ selectedRestaurant, setSelectedRestaurant ] = useState<Restaurant>(restaurants[0]);
-    const [ currentTop, setCurrentTop ] = useState<number>(0); 
     const [sortedRestaurants, setSortedRestaurants] = useState<Restaurant[]>([]);
     const containerRef = useRef<HTMLDivElement>(null);
-    
-
-    useEffect(() => {
-        const containter = containerRef.current;
-        const handleScroll = () => {
-            if (containter) {
-                const scrollTop = containter.scrollTop;
-                setCurrentTop(scrollTop);
-            }
-        };
-
-        if (containter) {
-            containter.addEventListener('scroll', handleScroll);
-        }
-
-        return () => {
-            if (containter) {
-                containter.removeEventListener('scroll', handleScroll);
-            }
-        };
-    }, []);
 
     useEffect(() => {
         const sorted = restaurants.map((restaurant) => ({
@@ -72,22 +50,24 @@ export const ListDialog: React.FC<Props> = ({ isSelected, currentCoord }) => {
     return (    
         <Container $isSelected={isSelected} ref={containerRef}>
             {/* <SortDropDown/> */}
-            <CardContainer>
-                {sortedRestaurants.map((restaurnt, i) => {
-                    return (
-                        <Card 
-                            key={i}
-                            setIsCardClicked={setIsCardClicked}
-                            setSelectedRestaurant={setSelectedRestaurant}
-                            restaurant={restaurnt}/>
-                )})}
-            </CardContainer>
-            { isCardClicked && <DetailedCard
-                                    currentTop={currentTop}
-                                    restaurant={selectedRestaurant}
-                                    clickHandler = {() => setIsCardClicked(false)}
-                                    isClicked={isCardClicked}
-                                />
+            { isCardClicked 
+                && <DetailedCard
+                        restaurant={selectedRestaurant}
+                        clickHandler = {() => setIsCardClicked(false)}
+                        isClicked={isCardClicked}
+                    />
+            }            
+            { !isCardClicked 
+                && <CardContainer>
+                        {sortedRestaurants.map((restaurnt, i) => {
+                            return (
+                                <Card 
+                                    key={i}
+                                    setIsCardClicked={setIsCardClicked}
+                                    setSelectedRestaurant={setSelectedRestaurant}
+                                    restaurant={restaurnt}/>
+                        )})}
+                    </CardContainer>
             }
         </Container>        
     )
