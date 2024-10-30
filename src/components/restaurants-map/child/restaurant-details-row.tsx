@@ -18,6 +18,7 @@ const Container = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    font-size: 0.7rem;
 `
 
 const Name = styled.div`
