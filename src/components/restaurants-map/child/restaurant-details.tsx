@@ -54,9 +54,9 @@ const FirstRow = styled.div`
 `
 
 const Divider = styled.div`
-    height: 0.1rem; 
+    height: 0.05rem; 
     background-color: #b6b4b4;
-    margin: 0.3rem 0rem;
+    margin: 0.7rem 0rem;
     
 `
 export default RestaurantDetails;
