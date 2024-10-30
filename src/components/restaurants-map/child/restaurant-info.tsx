@@ -58,12 +58,12 @@ const Description = styled.h4`
     font-weight: 400;
     margin-bottom: 0.2rem;
 `
-const BusinessHours = styled.div`
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    margin: 0.2em 0rem;
-`
+// const BusinessHours = styled.div`
+//     width: 100%;
+//     display: flex;
+//     justify-content: space-between;
+//     margin: 0.2em 0rem;
+// `
 
 const Buttons = styled.div`
     width: 100%;
