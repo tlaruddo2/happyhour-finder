@@ -7,10 +7,11 @@ export type menu = {
     description?: string
 }
 
+// to show icons 
 export type RestaurantType = "Pub" | "Dining";
 
-type RestaurantDetailedType = 
-    "Pub" | "Casual Dining" | "FineDining" | "Seafood" | "SportsBar" | "BrewPub" | 
+export type RestaurantDetailedType = 
+    "Pub" | "CasualDining" | "FineDining" | "Seafood" | "SportsBar" | "BrewPub" | 
     "Tapas" | "ViewBar" | "Latin" | "Asian" | "Pizza" | "WineBar";
 
 export type Restaurant = { 

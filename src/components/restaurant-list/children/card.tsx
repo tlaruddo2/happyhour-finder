@@ -24,7 +24,7 @@ export const Card: React.FC<Props> = ({ restaurant, setIsCardClicked, setSelecte
             <Column style={{alignItems: "flex-end"}}>
                 <Contact googleMap={restaurant.googleMap} phone={restaurant.phone}/>
                 <div style={{fontSize: '0.9rem'}}>{restaurant.distance.toFixed(2)} km</div>
-                <TextBtn onClick={detailClickHandler}>Details</TextBtn>
+                <TextBtn onClick={detailClickHandler}>Menus</TextBtn>
             </Column>
         </Container>        
     )
