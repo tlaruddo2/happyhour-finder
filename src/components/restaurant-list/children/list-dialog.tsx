@@ -1,9 +1,11 @@
-import type { Coord, Restaurant } from "state/types";
+import type { Coord, Restaurant, RestaurantType } from "state/types";
 import React, { useState, useRef, useEffect } from "react";
 import { CardContainer, Container } from "./styled/list-dialog.styled"
 import { Card } from "./card";
 import { DetailedCard } from "./detailed-card";
 import { useRestaurantContext } from "state/store";
+import { SortDropDown } from "./sort-drop-down";
+import { RestaurantDetailedType } from "state/restaurants/restaurants-context";
 
 function haversine(lat1: number, lon1: number, lat2: number, lon2: number): number {
     const R = 6371.0; 
@@ -34,6 +36,8 @@ export const ListDialog: React.FC<Props> = ({ isSelected, currentCoord }) => {
     
     const [ isCardClicked, setIsCardClicked ] = useState<boolean>(false);
     const [ selectedRestaurant, setSelectedRestaurant ] = useState<Restaurant>(restaurants[0]);
+    const [ selectedRestaurantType, setSelectedRestaurantType] = useState<RestaurantType | 'All'>('All') 
+    const [ selectedRestaurantDetailedType, setSelectedRestaurantDetailedType] = useState<RestaurantDetailedType | 'All'>('All') 
     const [sortedRestaurants, setSortedRestaurants] = useState<Restaurant[]>([]);
     const containerRef = useRef<HTMLDivElement>(null);
 
@@ -42,14 +46,20 @@ export const ListDialog: React.FC<Props> = ({ isSelected, currentCoord }) => {
             ...restaurant,
             distance: haversine(restaurant.lat, restaurant.lng, currentCoord.lat, currentCoord.lng),
         }))
+        .filter((r) => selectedRestaurantType !== 'All' ? r.type === selectedRestaurantType : true)
+        .filter((r) => selectedRestaurantDetailedType !== 'All' ? r.detailedType === selectedRestaurantDetailedType  : true)
         .sort((a, b) => a.distance - b.distance);
     
         setSortedRestaurants(sorted);
-    }, [restaurants, currentCoord]);    
+    }, [restaurants, currentCoord, selectedRestaurantType, selectedRestaurantDetailedType]);    
     
     return (    
         <Container $isSelected={isSelected} ref={containerRef}>
-            {/* <SortDropDown/> */}
+            <SortDropDown 
+                selectedRestaurantType={selectedRestaurantType}
+                setSelectedRestaurantType={setSelectedRestaurantType}
+                setSelectedRestaurantDetailedType={setSelectedRestaurantDetailedType}
+            />
             { isCardClicked 
                 && <DetailedCard
                         restaurant={selectedRestaurant}
