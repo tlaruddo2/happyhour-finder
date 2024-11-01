@@ -62,7 +62,8 @@
             { "name": "1/2 Price Bottles of Wine", "description": "La Crema Chardonnay, Maison No.9 Rosé, Nielson Pinot Noir" }
         ],
         "isInfoOpend": false,
-        "isInPromotion": false
+        "isInPromotion": false,
+        "lastModified": "2024-10-31T13:45:30-08:00"
     },
     {
         "id": 2, 
@@ -121,7 +122,8 @@
             { "name": "Stella Artois", "price": "$7.00", "description": "400ml" }            
         ],
         "isInfoOpend": false,
-        "isInPromotion": false
+        "isInPromotion": false,
+        "lastModified": "2024-10-31T13:45:30-08:00"
     },        
     {
         "id": 3, 
@@ -165,14 +167,15 @@
             { "name": "BUDWEISER SLEEVE", "price": "$6.25", "description": "SUNDAY" }
         ],
         "isInfoOpend": false,
-        "isInPromotion": false
+        "isInPromotion": false,
+        "lastModified": "2024-10-31T13:45:30-08:00"
     },
     {
         "id": 4, 
         "name": "Fanny Bay Oyster Bar & Shellfish Market",
         "type": "Dining", 
         "detailedType": "Seafood", 
-        "description": "Shellfish market & contemporary seafood eatery featuring a raw bar, sandwiches, fried fare & more.",
+        "description": "Shellfish market & contemporary seafood eatery with a raw bar",
         "address": "762 Cambie St, Vancouver, BC V6B 2P2",
         "startTime": "14:00", 
         "endTime": "22:00",
@@ -224,14 +227,15 @@
             { "name": "'Inspiration' Sparkling Sake", "price": "30", "description": "Niigata, JP 300ml" }            
         ],
         "isInfoOpend": false,
-        "isInPromotion": false
+        "isInPromotion": false,
+        "lastModified": "2024-10-31T13:45:30-08:00"
     },
     {
         "id": 5, 
         "name": "Donnellan's Irish Pub",
         "type": "Pub", 
         "detailedType": "Pub", 
-        "description": "Classic pub with an old-world vibe providing Irish comfort food along with happy hours & live music.",
+        "description": "Classic pub with an old-world vibe",
         "address": "1082 Granville St, Vancouver, BC V6Z 1L5",
         "startTime": "12:00", 
         "endTime": "03:00",
@@ -261,14 +265,15 @@
             { "name": "Bucket Of The Day", "price": "27", "description": "5 Bottles. Please ask server" }
         ],
         "isInfoOpend": false,
-        "isInPromotion": false
+        "isInPromotion": false,
+        "lastModified": "2024-10-31T13:45:30-08:00"
     },
     {
         "id": 6, 
         "name": "The Park Pub",
         "type": "Pub", 
         "detailedType": "Pub", 
-        "description": "Watering hole with contemporary decor, many craft beers & a menu of gourmet burgers, pasta & steak",
+        "description": "Watering hole with contemporary decor",
         "address": "1755 Davie St, Vancouver, BC V6G 2K6",
         "startTime": "07:00", 
         "endTime": "01:00",
@@ -326,14 +331,15 @@
             { "name": "Jameson/Tequila Shots", "price": "$5", "description": "Sunday." }
         ],
         "isInfoOpend": false,
-        "isInPromotion": false
+        "isInPromotion": false,
+        "lastModified": "2024-10-31T13:45:30-08:00"
     },
     {
         "id": 7, 
         "name": "Malone's Taphouse",
         "type": "Pub", 
         "detailedType": "Pub", 
-        "description": "Pub with an upstairs lounge featuring a broad selection of craft beers plus screens for the games",
+        "description": "Pub with an upstairs lounge",
         "address": "608 W Pender St, Vancouver, BC V6B 1V8",
         "startTime": "11:00", 
         "endTime": "01:00",
@@ -388,14 +394,15 @@
             { "name": "P49 Trash Panda Hazy IPA", "price": "$5.50", "description": "Parallel 49 Brewing, Vancouver, BC. Sunday." }
         ],
         "isInfoOpend": false,
-        "isInPromotion": false
+        "isInPromotion": false,
+        "lastModified": "2024-10-31T13:45:30-08:00"
     },
     {
         "id": 8, 
         "name": "Glowbal Restaurant",
         "type": "Dining", 
         "detailedType": "FineDining", 
-        "description": "Global fare & lots of cocktails served in a glitzy, sprawling space with a long, sleek bar",
+        "description": "Global fare & lots of cocktails served in a glitzy",
         "address": "590 W Georgia St, Vancouver, BC V6E 1A3",
         "startTime": "11:30", 
         "endTime": "24:00",
@@ -440,14 +447,15 @@
             { "name": "Classic Martinis 2oz", "price": "$10", "description": "tanqueray gin, white claw vodka | dry or dirty, cosmopolitan, lemon drop" }
         ],
         "isInfoOpend": false,
-        "isInPromotion": false
+        "isInPromotion": false,
+        "lastModified": "2024-10-31T13:45:30-08:00"
     },
     {
         "id": 9, 
         "name": "The Cambie Bar & Grill",
         "type": "Pub", 
         "detailedType": "Pub", 
-        "description": "Long-standing alehouse with drinks specials, pub grub & a laid-back hostel upstairs",
+        "description": "Long-standing alehouse with drinks specials",
         "address": "300 Cambie St, Vancouver, BC V6B 2N3",
         "startTime": "11:00", 
         "endTime": "01:00",
@@ -503,14 +511,15 @@
             { "name": "Sangria 54 oz pitcher", "price": "$21.00" }
         ],
         "isInfoOpend": false,
-        "isInPromotion": false
+        "isInPromotion": false,
+        "lastModified": "2024-10-31T13:45:30-08:00"
     },
     {
         "id": 10, 
         "name": "Devil's Elbow Ale and Smoke House",
         "type": "Dining", 
         "detailedType": "CasualDining", 
-        "description": "Stylish tavern with live music, craft beer, many whiskies & Southern fare, including smoked meat",
+        "description": "Stylish tavern with live music, craft beer & BBQ",
         "address": "562 Beatty St, Vancouver, BC V6B 2L3",
         "startTime": "11:30", 
         "endTime": "12:00",
@@ -543,7 +552,167 @@
             { "name": "Beer, Bourbon & Bacon", "price": "$12", "description": "any 12oz beer + 1oz bulleit bourbon + 3 bacon strips" }
         ],
         "isInfoOpend": false,
-        "isInPromotion": false
-    }                               
+        "isInPromotion": false,
+        "lastModified": "2024-10-31T13:45:30-08:00"
+    },
+    {
+        "id": 11, 
+        "name": "Chit Chat Burger Bar",
+        "type": "Dining", 
+        "detailedType": "CasualDining", 
+        "description": "Spacious, sleek operation furnishing handcrafted burgers",
+        "address": "955 Granville St, Vancouver, BC V6Z 1L3",
+        "startTime": "16:00", 
+        "endTime": "02:00",
+        "day": "All days", 
+        "food": [], 
+        "drink": [],
+        "googleMap": "https://maps.app.goo.gl/ua8rWFdHZee11bj46",
+        "website": "https://chitchatburgerbar.com/drinks-menu/",
+        "lat": 49.28002584199568, 
+        "lng": -123.12239546987767,
+        "distance" : 0,
+        "phone": "+16046888887",
+        "happyhourHour": "Sunday to Thursday: All day Friday & Saturday: Until 6PM", 
+        "happyhourFood": [],
+        "happyhourDrink": [
+            { "name": "Beer", "price": "$6.00", "description": "16oz" },
+            { "name": "Cocktails", "price": "$8.50" },
+            { "name": "Highballs", "price": "$5.50" },
+            { "name": "Margarita", "price": "$8.50" },
+            { "name": "Sangria", "price": "$8.00" },
+            { "name": "Wine (5oz)", "price": "$8.00" }
+        ],
+        "isInfoOpend": false,
+        "isInPromotion": false,
+        "lastModified": "2024-10-31T13:45:30-08:00"
+    },
+    {
+        "id": 12, 
+        "name": "ZUBU Ramen",
+        "type": "Dining", 
+        "detailedType": "Japanese", 
+        "description": "Japanese Ramen Restaurant",
+        "address": "869 Hornby St, Vancouver, BC V6Z 1T9",
+        "startTime": "11:30", 
+        "endTime": "23:00",
+        "day": "All days", 
+        "food": [], 
+        "drink": [],
+        "googleMap": "https://maps.app.goo.gl/5d67tLSY34vZZxBg7",
+        "website": "https://byzubu.com/ramen/",
+        "lat": 49.28201173962641, 
+        "lng": -123.12319154000322,
+        "distance" : 0,
+        "phone": "+16044235699",
+        "happyhourHour": "Sunday to Thursday: 2 - 5PM & 9PM - Close", 
+        "happyhourFood": [
+            { "name": "Brussels Sprouts Tempura", "price": "$6.95", "description": "brussels sprouts, white truffle oil" },
+            { "name": "Takoyaki", "price": "$9.95", "description": "5pc battered octopus, egg tartar, okonomi sauce, mayonnaise, dried bonito flakes, green onion, shredded nori seaweed" },
+            { "name": "Ebi Mayo", "price": "$9.95", "description": "shrimp tempura tossed in spicy mayonnaise, baby leaves" },
+            { "name": "Sweet Chili Heated Edamame (L)", "price": "$6.95", "description": "chili garlic vinaigrette, potato sticks, edamame" },
+            { "name": "Consommé Garlic", "price": "$6.95", "description": "french fries, consommé garlic powder, paprika powder" },
+            { "name": "Pan-Fried Gyoza", "price": "$9.55", "description": "ground pork, garlic, ginger, cabbage, onion, chives, shredded Japanese leek, pork broth" },
+            { "name": "Pan-Fried Vegetable Gyoza", "price": "$9.95", "description": "ground soy meat, hakusai cabbage, green onion, carrots, tofu, lotus root, ginger, garlic, shredded japanese leek, vegetable broth" },
+            { "name": "Spicy Tuna Tacos", "price": "$8.30", "description": "2 mini crispy wonton tacos made with spicy tuna, green onion, tobiko, sushi vinegared jalapeno" },
+            { "name": "Salmon Tacos", "price": "$6.95", "description": "2 mini crispy wonton tacos made with sashimi grade salmon, cherry tomato, red onion, cilantro" },
+            { "name": "Assorted Seafood Plate", "price": "$34.95", "description": "soy and dashi marinated ikura, salmon poke, spicy tuna with sushi vinegared jalapeño, salmon tacos, seaweed salad, tako wasabi, tamago, ebi fry with egg tartar, baby scallop, tuna with scallion ginger sauce, wonton crisps" },
+            { "name": "Zubu House Salad", "price": "$6.95", "description": "arugula, baby leaves, beets, sliced cabbage, house dressing made from soy vinaigrette and daikon" },
+            { "name": "Seafood Salad", "price": "$14.95", "description": "salmon, tuna, shrimp, tobiko mayonnaise baby scallops, arugula, baby leaves, beets, avocado, cherry tomato, corn flakes, seaweed salad, kaiware, house dressing made from soy vinaigrette and daikon" },
+            { "name": "Tonkotsu Ramen", "price": "$16.95", "description": "pork broth, pork chashu, kikurage, green onion, crispy garlic, nori seaweed" },
+            { "name": "Spicy Tonkotsu Ramen", "price": "$16.95", "description": "pork broth, pork chashu, kikurage, green onion, crispy garlic, nori seaweed, spicy bean sprouts. Choose your preference of spice level from mild / medium / hot / burning hot" },
+            { "name": "Creamy Chicken Ramen", "price": "$16.95", "description": "creamy chicken broth, chicken chashu, red onion, kale, microgreens" },
+            { "name": "Spicy Chicken Ramen", "price": "$16.95", "description": "creamy chicken broth, chicken chashu, red onion, kale, microgreens, spicy bean sprouts. Choose your preference of spice level from mild / medium / hot / burning hot" },
+            { "name": "Spicy Vegan Ramen", "price": "$16.95", "description": "vegetable broth, kale noodle, tofu, microgreens, red onion, kale, corn, crispy garlic, spicy sansho oil, sweet tofu skin. Non-Spicy option available" },
+            { "name": "Chicken Chashu Bowl", "price": "$16.95", "description": "chopped chicken chashu, ground chicken, spicy marinated bean sprouts, sesame seeds, scallion ginger sauce, pickles, steamed rice" },
+            { "name": "Gyu-Don Beef Bowl", "price": "$16.95", "description": "marinated sliced beef and onion, green onion, shichimi, pickles, steamed rice" },
+            { "name": "Vegan Bowl", "price": "$16.95", "description": "mixed greens, vegan butter corn, spicy shiitake mushroom, atsuage tofu, edamame, beets, vegan mayo, ground soy meat, steamed rice" },
+            { "name": "Panko Breaded Prawns Curry", "price": "$16.95", "description": "3pc ebi fry, ground chicken, Japanese curry, sliced cabbage, steamed rice" },
+            { "name": "Beef Sukiyaki Curry", "price": "$16.95", "description": "marinated sliced beef and onion, ground chicken, Japanese curry, sliced cabbage, steamed rice" },
+            { "name": "Mochi Ice Cream", "price": "$3.95", "description": "ice cream wrapped in Japanese rice dough. Choice of seasonal flavours" },
+            { "name": "Tiramisu", "price": "$6.95", "description": "lady fingers, mascarpone cheese, egg, cream, rum, coffee, toffee, 70% dark chocolate" }            
+        ],
+        "happyhourDrink": [
+            { "name": "Sapporo", "price": "16oz $6 / pitcher $17", "description": "Legendary Biru, Japan, 4.9% ABV" },
+            { "name": "Asahi Super Dry", "price": "16oz $8", "description": "Japan, 5% ABV" },
+            { "name": "Fluffy Cloud", "price": "16oz $8", "description": "Vancouver, BC, 6.5% ABV" },
+            { "name": "House Red", "price": "6oz $7 / 9oz $10", "description": "12.5% ABV" },
+            { "name": "House White", "price": "6oz $7 / 9oz $10", "description": "12.5% ABV" },
+            { "name": "Komé Dry", "price": "9oz $14", "description": "hot or cold, 15% ABV, dry, tropical fruits, mild sweetness" },
+            { "name": "Obaachan Yuzu", "price": "1oz $6 / 2oz $11", "description": "7.5% ABV, sweet, tart, Japanese citrus" },
+            { "name": "Nashi No Osaké", "price": "1oz $6 / 2oz $11", "description": "7.5% ABV, crisp, ripe asian pear" },
+            { "name": "Lavender Umé", "price": "1oz $4 / 2oz $7", "description": "9.5% ABV, sweet, herbaceous, floral, plum" },
+            { "name": "Takara Umeshu", "price": "1oz $4 / 2oz $7", "description": "12% ABV, Japanese ume plum, rich" },
+            { "name": "Yuzu Cream", "price": "$12.75", "description": "2oz, el jimador tequila, yuzu sake, cadillac cream" },
+            { "name": "Suutsu Fashion", "price": "$15.75", "description": "2oz, white oak whisky umeshu, blood orange" },
+            { "name": "Caesar Aka", "price": "$11.75", "description": "1oz, clamato, tabasco, pickled asparagus, lime" },
+            { "name": "Citrus Passion", "price": "$10.50", "description": "1oz, haku vodka, lemon, passion fruit" },
+            { "name": "Lycheepolitan", "price": "$11.25", "description": "2oz, Japanese shochu, soho lychee, chambord, Japanese yogurt" },
+            { "name": "Julianas Tokyo", "price": "pitcher $22.25", "description": "sake, white wine, peach, lychee, lime, mint" }
+        ],
+        "isInfoOpend": false,
+        "isInPromotion": false,
+        "lastModified": "2024-10-31T13:45:30-08:00"
+    },
+    {
+        "id": 13, 
+        "name": "Cactus Club Cafe Bentall 5",
+        "type": "Dining", 
+        "detailedType": "CasualDining", 
+        "description": "Casual Dining Restaurant",
+        "address": "588 Burrard St, Vancouver, BC V6C 0A8",
+        "startTime": "11:00", 
+        "endTime": "00:00",
+        "day": "All days", 
+        "food": [], 
+        "drink": [],
+        "googleMap": "https://maps.app.goo.gl/Srab5H89dvatYtWa9",
+        "website": "https://www.cactusclubcafe.com/locations/bentall-5/menu/happy-hour/",
+        "lat": 49.285619034191335, 
+        "lng": -123.11819279028347,
+        "distance" : 0,
+        "phone": "+16046820933",
+        "happyhourHour": "Every day 2-5pm + 9pm-close (dine-in only)", 
+        "happyhourFood": [
+            { "name": "Mini Crispy Chicken Sandwich", "price": "$5", "description": "spicy panko-crusted chicken, swiss cheese, sambal mayo, lettuce, tomato, pickle, onion" },
+            { "name": "Sea Salted Fries", "price": "$5.50" },
+            { "name": "London Fog Crème Brûlée", "price": "$7.50", "description": "blueberries, brown sugar, vanilla" },
+            { "name": "Avocado Dip", "price": "$8", "description": "pico de gallo, feta, chili oil, cilantro, fresh lime" },
+            { "name": "Truffle Fries", "price": "$8.50", "description": "truffle, herbs, grana padano, garlic aioli" },
+            { "name": "New York Cheesecake", "price": "$8.50", "description": "graham cracker crust, raspberry compote, hand-whipped cream" },
+            { "name": "Prawn Crunch Roll", "price": "$15.50", "description": "crispy prawn, mango, avocado, sesame soy paper, sriracha mayo, soy glaze" },
+            { "name": "Hot Chicken + Pickles", "price": "$15.50", "description": "crispy fried chicken, nashville spice, honey, creamy parmesan dip" },
+            { "name": "Avocado Kale Salad", "price": "$15.50", "description": "crispy chickpeas, grilled avocado, pickled red cabbage, fennel chili crumb, grana padano, lemon garlic dressing" },
+            { "name": "Chipotle Chicken Tacos", "price": "$16.50", "description": "achiote chicken, pineapple, cilantro, avocado crema" },
+            { "name": "Crab Cake", "price": "$16.50", "description": "panko-crusted canadian rock crab, prawn, cucumber, arugula, green goddess dressing" },
+            { "name": "Salmon Aburi Roll", "price": "$16.50", "description": "flame torched ocean wise™ steelhead, mango, avocado, crispy tempura, serrano pepper, soy glaze" },
+            { "name": "Cheddar Burger", "price": "$17", "description": "smashed certified angus beef®, aged cheddar, red relish, mayo, ketchup, mustard, sea salted fries" },
+            { "name": "Cajun Chicken Sandwich", "price": "$17", "description": "blackened cajun chicken, aged cheddar, lettuce, tomato, mayonnaise, brioche bun, sea salted fries" },
+            { "name": "Gardenburger®", "price": "$17", "description": "aged cheddar, red relish, mayonnaise, ketchup, mustard, brioche bun, sea salted fries" },
+            { "name": "The Med Bowl", "price": "$18.50", "description": "falafel, turmeric rice, beetroot hummus, kale, cucumber, red onion, tomatoes, macedonian feta, kalamata olives, yogurt, pickled red cabbage" },
+            { "name": "The Med Bowl with Grilled Shawarma Chicken", "price": "$23", "description": "falafel, turmeric rice, beetroot hummus, kale, cucumber, red onion, tomatoes, macedonian feta, kalamata olives, yogurt, pickled red cabbage" },
+            { "name": "Teriyaki Chicken Rice Bowl", "price": "$18.50", "description": "peppers, broccoli, red cabbage, bean sprouts, spicy yogurt" },
+            { "name": "Rigatoni Bolognese", "price": "$19.50", "description": "truffled pecorino, slow cooked beef and pork ragu, rosemary, fennel chili crumb, garlic crostini" },
+            { "name": "Crab Cake Frites", "price": "$24", "description": "panko-crusted canadian crab & prawn cakes, tartar sauce, kale salad, sea salted fries" },
+            { "name": "Blackened Creole Chicken", "price": "$24.50", "description": "creole butter, cajun spices, buttered mashed potatoes, seasonal vegetables" },
+            { "name": "Steak Frites", "price": "$26.50", "description": "8oz CAB® sirloin, kale salad, horseradish cream, sea salted fries" }    
+        ],
+        "happyhourDrink": [
+            { "name": "Sunset Soda", "price": "$5", "description": "1.5oz, absolut mandrin vodka, soda, bellini slush" },
+            { "name": "Longboard Lager", "price": "$5", "description": "Vancouver, BC, 5% ABV" },
+            { "name": "33 Acres of Life Amber Lager", "price": "$6.50", "description": "Vancouver, BC, 4.8% ABV" },
+            { "name": "Parallel 49 Stir Crazy Hazy", "price": "$6.50", "description": "Vancouver, BC, 4.5% ABV" },
+            { "name": "Happy Hour Red or White Wine (6oz)", "price": "$7" },
+            { "name": "Madrí Excepcional (16oz)", "price": "$7.50", "description": "Spain, 4.6% ABV" },
+            { "name": "The Bellini", "price": "$8", "description": "2oz, bacardi superior, peach schnapps, sparkling wine, peach and sangria" },
+            { "name": "Heineken", "price": "$8", "description": "Netherlands, 5% ABV" },
+            { "name": "Sugar-Free Margarita", "price": "$10", "description": "2oz, cazadores reposado, fresh lime, zero sugar, all the flavour" },
+            { "name": "Spiked Frapp", "price": "$10", "description": "1.5oz, smirnoff vodka, moka harar coffee, chocolate, milk, organic cocoa nibs" },
+            { "name": "Happy Hour Red or White Wine (9oz)", "price": "$10.50" }
+        ],
+        "isInfoOpend": false,
+        "isInPromotion": false,
+        "lastModified": "2024-10-31T13:45:30-08:00"
+    }                                           
 ]
 
