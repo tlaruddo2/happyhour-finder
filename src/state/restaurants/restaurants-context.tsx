@@ -12,7 +12,7 @@ export type RestaurantType = "Pub" | "Dining";
 
 export type RestaurantDetailedType = 
     "Pub" | "CasualDining" | "FineDining" | "Seafood" | "SportsBar" | "BrewPub" | 
-    "Tapas" | "ViewBar" | "Latin" | "Asian" | "Pizza" | "WineBar";
+    "Tapas" | "ViewBar" | "Latin" | "Asian" | "Pizza" | "WineBar" | "Japanese";
 
 export type Restaurant = { 
     // General Info
@@ -49,6 +49,7 @@ export type Restaurant = {
     //for devloper 
     isInfoOpend: boolean,
     isInPromotion: boolean,
+    lastModified: string,
 }
 
 type RestaurantState = {

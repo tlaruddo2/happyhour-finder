@@ -11,7 +11,7 @@ interface Props{
 
 const RestType = ['All', 'Pub', 'Dining']
 const detailedPubType = ['Pub', 'SportsBar', 'BrewPub', 'Tapas', 'ViewBar', 'WineBar']
-const detailedDiningType = ['CasualDining', 'FineDining', 'Seafood', 'Latin', 'Asian', 'Pizza']
+const detailedDiningType = ['CasualDining', 'FineDining', 'Seafood', 'Latin', 'Asian', 'Pizza', 'Japanese']
 
 export const SortDropDown: React.FC<Props> = ({ selectedRestaurantType, setSelectedRestaurantType, setSelectedRestaurantDetailedType }) => {
     const selectRef = useRef<HTMLSelectElement>(null)
