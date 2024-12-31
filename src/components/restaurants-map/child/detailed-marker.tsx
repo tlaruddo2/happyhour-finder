@@ -9,7 +9,7 @@ interface Props {
     selectedRestaurnt: Restaurant
     setSelectedRestaurant : React.Dispatch<React.SetStateAction<Restaurant | null>>
 }
-export const Marker: React.FC<Props> = ({ selectedRestaurnt, setSelectedRestaurant }) => {
+export const DetailedMarker: React.FC<Props> = ({ selectedRestaurnt, setSelectedRestaurant }) => {
     const infoBoxOptions = {
         disableAutoPan: true,
         boxStyle: {
