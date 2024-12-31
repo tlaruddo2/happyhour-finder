@@ -1,9 +1,10 @@
 import { GoogleMap, LoadScript } from "@react-google-maps/api";
-import { useMemo, useState } from "react";
+import { useMemo, useState, useCallback } from "react";
 import RestaurantMarkers from "./restaurant-markers";
 import CurrentLocationMarker from "./current-location-marker"
 import SearchBar from "components/search-bar/search-bar";
 import type { Coord, Restaurant } from "state/types";
+import { DetailedMarker } from "./detailed-marker";
 
 
 interface MapProps{   
@@ -11,7 +12,9 @@ interface MapProps{
     setCurrentCoord: React.Dispatch<React.SetStateAction<Coord>>
 }
 
-const libraries: ("places")[] = ["places"];
+// const libraries: ("places")[] = ["places"];
+const libraries: ("places" | "marker")[] = ["places", "marker"];
+
 
 const mapStyles = [
     {
@@ -76,6 +79,11 @@ const mapStyles = [
 
 const Map = ({ currentCoord, setCurrentCoord }: MapProps) => { 
     const [selectedRestaurant, setSelectedRestaurant] = useState<Restaurant | null>(null);
+    const [isMapLoaded, setIsMapLoaded] = useState(false);
+
+    const onMapLoad = useCallback(() => {
+        setIsMapLoaded(true);
+    }, []);
 
     const mapOptions = useMemo(() => ({
         fullscreenControl: false,
@@ -97,10 +105,24 @@ const Map = ({ currentCoord, setCurrentCoord }: MapProps) => {
                 mapContainerStyle={{width: "100%", height: "100%"}} 
                 onClick={() => setSelectedRestaurant(null)}
                 options={mapOptions}
+                onLoad={onMapLoad}
             >
                 <SearchBar setCurrentCoord={setCurrentCoord}/>
-                <CurrentLocationMarker lat={currentCoord.lat} lng={currentCoord.lng}/>
-                <RestaurantMarkers setSelectedRestaurant={setSelectedRestaurant} selectedRestaurant={selectedRestaurant}/>
+                {isMapLoaded && (
+                    <>
+                        <CurrentLocationMarker lat={currentCoord.lat} lng={currentCoord.lng}/>
+                        <RestaurantMarkers 
+                            setSelectedRestaurant={setSelectedRestaurant} 
+                            selectedRestaurant={selectedRestaurant}
+                        />
+                        {selectedRestaurant && (
+                            <DetailedMarker
+                                selectedRestaurnt={selectedRestaurant}
+                                setSelectedRestaurant={setSelectedRestaurant}
+                            />
+                        )}
+                    </>
+                )}
             </GoogleMap>
         </LoadScript>
     )
